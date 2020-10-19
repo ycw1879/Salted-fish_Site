@@ -1,0 +1,19 @@
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!-- root-context.xml: sqlSessionFactory / mapperLocations / auto load -->
+
+    <!-- underscore to camelCase auto change -->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <typeAlias type="java.util.HashMap" alias="hashmap"/>
+    </typeAliases>
+
+
+</configuration>

@@ -1,0 +1,126 @@
+@import "header.css";
+@import "contents.css";
+@import "footer.css";
+@import "common.css";
+
+.blank {
+  height: 1000px;
+  width: 100%;
+}
+
+.btn-sizing {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  border-radius: 100%;
+  background: rgb(126, 116, 103);
+  color: #fff;
+  transition: 0.2s;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+}
+.sticky-banner-frame {
+  position: fixed;
+  right: 30px;
+  bottom: 10vh;
+}
+.sticky-banner-frame .btn-frame {
+  margin-bottom: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sticky-banner-frame .btn-frame:nth-last-child(-n + 1) {
+  margin-bottom: 0px;
+}
+.sticky-banner-frame .btn-call:hover,
+.sticky-banner-frame .btn-map:hover,
+.sticky-banner-frame .btn-bascket:hover {
+  border: 0.1px solid #333;
+  background: #fff;
+  color: rgb(66, 60, 51);
+}
+
+.sticky-banner-frame .btn-map:active,
+.sticky-banner-frame .btn-call:active,
+.sticky-banner-frame .btn-bascket:active {
+  border: 0.1px solid rgb(126, 116, 103);
+  background: #ccc;
+  color: #333;
+}
+.sticky-banner-frame .btn-bascket {
+  background: rgb(75, 39, 39);
+  border: 0.1px solid #333;
+  color: #fff;
+}
+.sticky-banner-frame .btn-top {
+  background: #fff;
+  border: 0.1px solid #333;
+  color: #333;
+}
+.sticky-banner-frame .btn-top:hover {
+  background: #333;
+  border: 0.1px solid #fff;
+  color: #fff;
+}
+.sticky-banner-frame .btn-top:active {
+  background: #000;
+  border: 0.1px solid #fff;
+  color: #eee;
+}
+.sticky-banner-frame .btn-top .top-icon {
+  position: relative;
+}
+.sticky-banner-frame .btn-top:hover .top-icon > span {
+  background: #fff;
+  animation: 0.4s bounce infinite ease-in-out alternate;
+}
+@keyframes bounce {
+  0% {
+    top: 13px;
+  }
+  100% {
+    top: 8px;
+    background: #333;
+  }
+}
+.sticky-banner-frame .btn-top .top-icon > span {
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  background: #333;
+  top: 13px;
+  transition: 0.2s;
+}
+.sticky-banner-frame .btn-top .top-icon .top-icon-01 {
+  transform: rotate(45deg);
+  left: 31px;
+}
+.sticky-banner-frame .btn-top .top-icon .top-icon-02 {
+  transform: rotate(-45deg);
+  left: 26px;
+}
+
+/* LOGIN */
+.img-frame{
+  margin:50px auto;
+}
+.img-frame .img{
+  width:auto;
+  box-shadow: 0 0 5px #ccc;
+}
+.img-frame .img img{
+  max-width: 500px;
+}
+.form-login form > *{
+  padding: 10px;
+}
+.form-login [type="submit"]:hover{
+  background: #fff;
+}
+.form-login .login-title{
+  margin-top: 100px;
+}
+
+/* MAPTEXT */
+.map-text-frame li{display: flex;}
+.map-text-frame li div.map-title{ width:120px; font-weight: bold;}

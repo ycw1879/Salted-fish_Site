@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:websocket="http://www.springframework.org/schema/websocket"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+		">
+
+    <!-- Enables the Spring MVC @Service,@Repository,@Component programming model -->
+    <mvc:annotation-driven />
+    <!-- task, scheduler -->
+    <task:annotation-driven />
+
+    <!--  -->
+    <!--  mvc component scan -->
+    <!--  -->
+    <context:component-scan base-package="com.board.template" use-default-filters="false" >
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
+
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+
+    <!--  -->
+    <!-- Property Files -->
+    <!--  -->
+    <bean id="systemProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:/system.properties"/>
+    </bean>
+    <util:properties id="props" location="classpath:/system.properties" />
+
+
+
+    <!--  -->
+    <!-- mybatis -->
+    <!--  -->
+    <!-- 추후 셋팅 -->
+<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+<!--        &lt;!&ndash;<property name="dataSource" ref="dataSource"></property>&ndash;&gt;-->
+<!--        <property name="dataSource" ref="hikariCPDataSource"></property>-->
+<!--        <property name="configLocation" value="classpath:/mybatis-config.xml"></property>-->
+<!--        <property name="mapperLocations" value="classpath:/queries/**/*.xml" />-->
+<!--    </bean>-->
+<!--    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">-->
+<!--        <constructor-arg ref="sqlSessionFactory"></constructor-arg>-->
+<!--    </bean>-->
+
+    <!--  -->
+    <!-- datasource -->
+    <!--  -->
+<!--    <bean id="hikariCPDataSource" class="com.zaxxer.hikari.HikariDataSource">-->
+<!--        <constructor-arg ref="hikariCPConfig"></constructor-arg>-->
+<!--        &lt;!&ndash;<property name="driverClassName" value="${db.driver}"></property>&ndash;&gt;-->
+<!--        &lt;!&ndash;<property name="jdbcUrl" value="${db.url}"></property>&ndash;&gt;-->
+<!--        &lt;!&ndash;<property name="username" value="${db.username}"></property>&ndash;&gt;-->
+<!--        &lt;!&ndash;<property name="password" value="${db.password}"></property>&ndash;&gt;-->
+<!--    </bean>-->
+
+<!--    <bean id="hikariCPConfig" class="com.zaxxer.hikari.HikariConfig">-->
+<!--        <property name="driverClassName" value="${db.driver}"></property>-->
+<!--        <property name="jdbcUrl" value="${db.url}"></property>-->
+<!--        <property name="username" value="${db.username}"></property>-->
+<!--        <property name="password" value="${db.password}"></property>-->
+<!--        <property name="poolName" value="HikariCP"></property>-->
+<!--        &lt;!&ndash;        <property name="minimumIdle" value="5"></property>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <property name="maximumPoolSize" value="100"></property>&ndash;&gt;-->
+<!--    </bean>-->
+    <!-- // datasource -->
+
+</beans>

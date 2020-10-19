@@ -1,0 +1,32 @@
+/* HEADER */
+.login-nav {
+  margin: 5px 20px 0 0;
+}
+.login-nav li {
+  height: 30px;
+  padding: 0 10px;
+  position: relative;
+}
+.login-nav li a {
+  text-decoration: none !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav-frame {
+  text-align: center;
+}
+.banner-frame{
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.card-name-frame .card-name {
+  max-width: 260px;
+  margin-left: 0;
+}
+.sign-frame .sign {
+  max-width: 600px;
+}

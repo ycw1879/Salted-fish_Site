@@ -87,3 +87,5 @@ MANIFEST.MF
 
 # VS Code
 .vscode
+
+lib/

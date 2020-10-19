@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:websocket="http://www.springframework.org/schema/websocket"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd"
+>
+
+    <!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+    <mvc:default-servlet-handler/>
+
+    <!-- Enables the Spring MVC @Service,@Repository,@Component programming model -->
+    <mvc:annotation-driven />
+
+    <!--  -->
+    <!--  mvc component scan -->
+    <!--  -->
+    <context:component-scan base-package="com.board.template" use-default-filters="false" >
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+
+    <!--  -->
+    <!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+    <!--  -->
+    <mvc:resources mapping="/resources/**" location="resources/" cache-period="0"/>
+
+    <!--  external access  -->
+    <!--  빌드시 주석 제거  -->
+    <!--  외부 directory 주소 -->
+<!--    <mvc:resources mapping="/img/**" location="${img.dir}" cache-period="0"/>-->
+
+    <!--  -->
+    <!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+    <!--  -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/view/" />
+        <property name="suffix" value=".jsp" />
+        <property name="exposeContextBeansAsAttributes" value="true"/>
+        <property name="exposedContextBeanNames">
+            <list>
+                <value>codeManager</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="0"></property>
+    </bean>
+
+    <!-- Controller에서 JsonModelAndView를 리턴한다면, ResponseBody를 Json으로 반환-->
+    <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" id="jsonView">
+        <property name="contentType" value="application/json;charset=UTF-8"></property>
+    </bean>
+
+    <!--  -->
+    <!--  request mapping -->
+    <!--  -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                    <property name="supportedMediaTypes">
+                        <list>
+                            <value>text/html;charset=UTF-8</value>
+                            <value>application/json;charset=UTF-8</value>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/**/*.view">viewController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewController" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+
+    <!--  interceptor  -->
+    <!-- 추후 셋팅 -->
+<!--    <mvc:interceptors>-->
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/__admin__/**"/>-->
+<!--            <mvc:exclude-mapping path="/__admin__/login"/>-->
+<!--            <bean class="com.goboogie.common.spring.AdminLoginInterceptor"/>-->
+<!--        </mvc:interceptor>-->
+<!--    </mvc:interceptors>-->
+
+</beans>

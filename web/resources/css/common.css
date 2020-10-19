@@ -1,0 +1,276 @@
+/* COMMON */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  transition: .01s;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+li > a {
+  width: 100%;
+  height: 100%;
+}
+* > img {
+  width: 100%;
+}
+::placeholder{
+  color: #aaa;
+}
+
+.gs-space-around {
+  justify-content: space-around;
+}
+.gs-space-between {
+  justify-content: space-between;
+}
+.gs-flex-center {
+  justify-content: center;
+}
+.gs-flex-end {
+  justify-content: flex-end;
+}
+.gs-block {
+  display: block;
+}
+.gs-flex {
+  display: flex;
+}
+.gs-flex-ch {
+  flex-direction: column;
+}
+.gs-flex > li {
+  display: flex;
+  align-items: center;
+}
+.gs-ch-fill > * {
+  width: 100%;
+}
+
+.gs-w100 {
+  width: 100%;
+}
+.gs-w90 {
+  width: 90%;
+}
+.gs-w80 {
+  width: 80%;
+}
+.gs-w70 {
+  width: 70%;
+}
+.gs-w60 {
+  width: 60%;
+}
+.gs-w50 {
+  width: 50%;
+}
+.gs-w40 {
+  width: 40%;
+}
+.gs-w30 {
+  width: 30%;
+}
+.gs-w20 {
+  width: 20%;
+}
+.gs-w10 {
+  width: 10%;
+}
+
+.gs-m-a {
+  margin: auto;
+}
+.gs-m-w {
+  margin: 0 auto;
+}
+.gs-m-h {
+  margin: auto 0;
+}
+.gs-center {
+  margin: auto;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.gs-line {
+  width: 98vw;
+  height: 1px;
+  margin: 10px auto;
+  border-bottom: solid 1px #eee;
+}
+
+.gs-li-wall > li:last-child:after {
+  display: none;
+}
+.gs-li-wall > li:after {
+  content: "";
+  margin: 0 5px;
+  height: 14px;
+  width: 1px;
+  background: #aaa;
+}
+.gs-li-wall-row > li:last-child {
+  border-bottom: none;
+}
+.gs-li-wall-row > li {
+  border-bottom: #eee 1px solid;
+  padding: 20px 0;
+}
+.gs-li-dot > li:last-child:after {
+  display: none;
+}
+.gs-li-dot > li:after {
+  content: "";
+  margin: auto 10px;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  background: #aaa;
+  display: inline-block;
+}
+
+.gs-li-mh-5 > li {
+  margin: 5px auto;
+}
+.gs-li-mh-10 > li {
+  margin: 10px auto;
+}
+.gs-li-mh-20 > li {
+  margin: 20px auto;
+}
+.gs-li-mr-5 > li {
+  margin-right: 5px;
+}
+.gs-li-mr-10 > li {
+  margin-right: 10px;
+}
+.gs-li-mr-20 > li {
+  margin-right: 20px;
+}
+
+.gs-mh-5 {
+  margin: 5px auto;
+}
+.gs-mh-10 {
+  margin: 10px auto;
+}
+.gs-mh-20 {
+  margin: 20px auto;
+}
+.gs-mr-5 {
+  margin-right: 5px;
+}
+.gs-mr-10 {
+  margin-right: 10px;
+}
+.gs-mr-20 {
+  margin-right: 20px;
+}
+.gs-mb-5 {
+  margin-bottom: 5px;
+}
+.gs-mb-10 {
+  margin-bottom: 10px;
+}
+.gs-mb-20 {
+  margin-bottom: 20px;
+}
+.gs-mb-100 {
+  margin-bottom: 100px;
+}
+
+.gs-min-60 {
+  min-width: 60px;
+}
+.gs-min-90 {
+  min-width: 90px;
+}
+.gs-min-120 {
+  min-width: 120px;
+}
+
+.gs-fc-999{color: #999;}
+.gs-fc-bbb{color: #bbb;}
+.gs-b{font-weight: bold;}
+
+.gs-inner{
+  width:80%;
+  margin: auto;
+}
+
+.gs-btn{
+  padding: 10px 20px;
+  border:1px solid rgba(200,200,200,.8);
+  border-radius:5px;
+  cursor:pointer;
+  box-shadow:0 0 2px rgba(50,50,50,.6) inset;
+  position: relative;
+}
+.gs-btn:hover::after{
+  content: '';
+  width:100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0,0,0,0.2);
+  top:0; left: 0;
+}
+.gs-btn:active::after{
+  content: '';
+  width:100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0,0,0,0.1);
+  top:0; left: 0;
+  border-radius:5px;
+}
+.gs-btn-green{
+  background:#00BB4E;
+}
+.gs-btn-green:hover{
+  background:#27AB69;
+}
+.gs-btn-default{
+  background: -webkit-linear-gradient(#fff,#ccc);
+  background: -moz-linear-gradient(#fff,#ccc);
+  background: -o-linear-gradient(#fff,#ccc);
+  background: linear-gradient(#fff,#ccc);
+  }
+.gs-btn-default:hover{
+  background: -webkit-linear-gradient(#eee,#bbb);
+  background: -moz-linear-gradient(#eee,#bbb);
+  background: -o-linear-gradient(#eee,#bbb);
+  background: linear-gradient(#eee,#bbb);
+}
+
+.gs-input{
+  padding: 5px 10px;
+  border:1px solid #ddd;
+  border-radius:3px;
+  cursor:pointer;
+  box-shadow:0 0 2px inset #999 ;
+  position: relative;
+  outline: none;
+  transition: .3s;
+}
+.gs-input:focus{
+  border:1px solid #2849b4;
+  box-shadow:0 0 3px #2849b4 inset;
+}
+
+.gs-title{
+  font-size: 2em;
+  font-weight: bold;
+  height: 1em;
+}
+.gs-title::before{
+  content: '' ;
+  width:4px;
+  height: 85%;
+  display: inline-block;
+  background: #333;
+}
