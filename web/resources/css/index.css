@@ -101,26 +101,76 @@
 }
 
 /* LOGIN */
-.img-frame{
-  margin:50px auto;
+.img-frame {
+  margin: 50px auto;
 }
-.img-frame .img{
-  width:auto;
+.img-frame .img {
+  width: auto;
   box-shadow: 0 0 5px #ccc;
 }
-.img-frame .img img{
+.img-frame .img img {
   max-width: 500px;
 }
-.form-login form > *{
+.form-login form > * {
   padding: 10px;
 }
-.form-login [type="submit"]:hover{
+.form-login [type="submit"]:hover {
   background: #fff;
 }
-.form-login .login-title{
+.form-login .login-title {
   margin-top: 100px;
 }
 
 /* MAPTEXT */
-.map-text-frame li{display: flex;}
-.map-text-frame li div.map-title{ width:120px; font-weight: bold;}
+.map-text-frame li {
+  display: flex;
+}
+.map-text-frame li div.map-title {
+  width: 120px;
+  font-weight: bold;
+}
+
+/* POST */
+.table-comment {
+  background: #eee;
+  height: 3em !important;
+}
+.write-btn {
+  text-align: center;
+  margin-right: 0;
+}
+input[type="text"] {
+  padding: 0 10px;
+  outline: none;
+}
+
+/* POST-WRITE */
+.post-write-title h2 {
+  font-size: 16px;
+  border-bottom: solid 1px #aaa;
+  padding: 0 0 10px;
+  width: 100%;
+}
+
+.post-write li.post-write-name div:nth-child(2) {
+  border: none;
+  padding: 0 0 20px 0;
+}
+.post-write li > div:nth-child(2) {
+  border: 1px solid #aaa;
+  width: 100%;
+}
+.post-write li > div:nth-child(2) {
+  padding: 10px 5px;
+}
+.post-write li div input {
+  outline: none;
+  border: none;
+}
+.post-write-content textarea {
+  resize: none;
+}
+.write-img {
+  background: #eee;
+  border-top: none;
+}

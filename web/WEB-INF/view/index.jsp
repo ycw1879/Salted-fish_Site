@@ -1,22 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gimmyeongsu
-  Date: 2019/10/29
-  Time: 1:39 오후
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<%
-  request.setCharacterEncoding("UTF-8");
-%>
-<html lang="utf-8">
-  <head>
-    <jsp:include page="common/head.jsp"/>
-  </head>
-
+<%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="UTF-8">
+  <%@ include file="commons/head.jsp" %>
   <body>
-  $END$<br/>
-  ttttt
-  </body>
+    <div class="__body">
+      <%@ include file="commons/header.jsp" %>
 
+      <div class="contents">
+        <input type="phone" name="phoneNumber" value=""/>
+      </div>
+
+      <div class="blank gs-center">
+
+      </div>
+
+      <%@ include file="commons/aside.jsp" %>
+      </div>
+    <%@ include file="commons/footer.jsp" %>
+    </div>
+  </body>
 </html>
