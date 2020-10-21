@@ -26,7 +26,7 @@
     <!--  -->
     <!--  mvc component scan -->
     <!--  -->
-    <context:component-scan base-package="com.board.template" use-default-filters="false" >
+    <context:component-scan base-package="com.gomso" use-default-filters="false" >
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
@@ -48,36 +48,32 @@
     <!-- mybatis -->
     <!--  -->
     <!-- 추후 셋팅 -->
-<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
-<!--        &lt;!&ndash;<property name="dataSource" ref="dataSource"></property>&ndash;&gt;-->
-<!--        <property name="dataSource" ref="hikariCPDataSource"></property>-->
-<!--        <property name="configLocation" value="classpath:/mybatis-config.xml"></property>-->
-<!--        <property name="mapperLocations" value="classpath:/queries/**/*.xml" />-->
-<!--    </bean>-->
-<!--    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">-->
-<!--        <constructor-arg ref="sqlSessionFactory"></constructor-arg>-->
-<!--    </bean>-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--<property name="dataSource" ref="dataSource"></property>-->
+        <property name="dataSource" ref="hikariCPDataSource"></property>
+        <property name="configLocation" value="classpath:/mybatis-config.xml"></property>
+        <property name="mapperLocations" value="classpath:/queries/**/*.xml" />
+    </bean>
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+        <constructor-arg ref="sqlSessionFactory"></constructor-arg>
+    </bean>
 
     <!--  -->
     <!-- datasource -->
     <!--  -->
-<!--    <bean id="hikariCPDataSource" class="com.zaxxer.hikari.HikariDataSource">-->
-<!--        <constructor-arg ref="hikariCPConfig"></constructor-arg>-->
-<!--        &lt;!&ndash;<property name="driverClassName" value="${db.driver}"></property>&ndash;&gt;-->
-<!--        &lt;!&ndash;<property name="jdbcUrl" value="${db.url}"></property>&ndash;&gt;-->
-<!--        &lt;!&ndash;<property name="username" value="${db.username}"></property>&ndash;&gt;-->
-<!--        &lt;!&ndash;<property name="password" value="${db.password}"></property>&ndash;&gt;-->
-<!--    </bean>-->
+    <bean id="hikariCPDataSource" class="com.zaxxer.hikari.HikariDataSource">
+        <constructor-arg ref="hikariCPConfig"></constructor-arg>
+    </bean>
 
-<!--    <bean id="hikariCPConfig" class="com.zaxxer.hikari.HikariConfig">-->
-<!--        <property name="driverClassName" value="${db.driver}"></property>-->
-<!--        <property name="jdbcUrl" value="${db.url}"></property>-->
-<!--        <property name="username" value="${db.username}"></property>-->
-<!--        <property name="password" value="${db.password}"></property>-->
-<!--        <property name="poolName" value="HikariCP"></property>-->
-<!--        &lt;!&ndash;        <property name="minimumIdle" value="5"></property>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <property name="maximumPoolSize" value="100"></property>&ndash;&gt;-->
-<!--    </bean>-->
+    <bean id="hikariCPConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="driverClassName" value="${db.driver}"></property>
+        <property name="jdbcUrl" value="${db.url}"></property>
+        <property name="username" value="${db.username}"></property>
+        <property name="password" value="${db.password}"></property>
+        <property name="poolName" value="HikariCP"></property>
+        <!--        <property name="minimumIdle" value="5"></property>-->
+        <!--        <property name="maximumPoolSize" value="100"></property>-->
+    </bean>
     <!-- // datasource -->
 
 </beans>

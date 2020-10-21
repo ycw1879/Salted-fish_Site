@@ -9,10 +9,15 @@
     <!-- underscore to camelCase auto change -->
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="callSettersOnNulls" value="true"/>
+        <setting name="jdbcTypeForNull" value="NULL"/>
     </settings>
 
     <typeAliases>
         <typeAlias type="java.util.HashMap" alias="hashmap"/>
+        <typeAlias type="java.util.List" alias="list"/>
+        
+        <package name="com.gomso.vo"/>
     </typeAliases>
 
 

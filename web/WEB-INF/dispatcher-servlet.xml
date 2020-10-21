@@ -25,7 +25,7 @@
     <!--  -->
     <!--  mvc component scan -->
     <!--  -->
-    <context:component-scan base-package="com.board.template" use-default-filters="false" >
+    <context:component-scan base-package="com.gomso" use-default-filters="false" >
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
 

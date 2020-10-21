@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper>
-    <select id="selectTest" resultType="int">
-        select 1
+<mapper namespace="com.gomso.dao.TestTableDao">
+
+    <insert id="insertTestTable" parameterType="com.gomso.vo.TestTableVO"
+        keyProperty="seq" useGeneratedKeys="true">
+        insert into test_table
+            (
+            test_string,
+            random_num
+            )
+        values
+            (
+            #{testString},
+            #{randomNum}
+            )
+    </insert>
+
+    <select id="selectTestTableSize" resultType="int">
+        select count(*)
+        from test_table
     </select>
+
+    <select id="selectTestTableList" resultType="com.gomso.vo.TestTableVO">
+        select *
+        from test_table
+    </select>
+
+    <select id="selectTestTableOne" resultType="com.gomso.vo.TestTableVO" parameterType="int">
+        select *
+        from test_table
+        where seq = #{seq}
+        limit 1
+    </select>
+
 </mapper>
