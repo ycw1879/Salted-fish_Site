@@ -11,6 +11,7 @@
         <li><a href="/page_view/map"><b>오시는 길</b> 페이지</a></li>
         <li><a href="/page_view/post"><b>고객 게시판</b> 페이지</a></li>
         <li><a href="/page_view/post_write"><b>고객 게시판 글작성</b> 페이지</a></li>
+        <li><a href="/page_view/more_page"><b>상품 상세보기</b> 페이지</a></li>
     </ul>
 </body>
 </html>

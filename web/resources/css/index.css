@@ -2,6 +2,8 @@
 @import "contents.css";
 @import "footer.css";
 @import "common.css";
+@import "more_page.css";
+@import "aside.css";
 
 .blank {
   height: 1000px;
@@ -19,85 +21,127 @@
   transition: 0.2s;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
 }
-.sticky-banner-frame {
-  position: fixed;
-  right: 30px;
-  bottom: 10vh;
-}
-.sticky-banner-frame .btn-frame {
-  margin-bottom: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.sticky-banner-frame .btn-frame:nth-last-child(-n + 1) {
-  margin-bottom: 0px;
-}
-.sticky-banner-frame .btn-call:hover,
-.sticky-banner-frame .btn-map:hover,
-.sticky-banner-frame .btn-bascket:hover {
-  border: 0.1px solid #333;
-  background: #fff;
-  color: rgb(66, 60, 51);
-}
 
-.sticky-banner-frame .btn-map:active,
-.sticky-banner-frame .btn-call:active,
-.sticky-banner-frame .btn-bascket:active {
-  border: 0.1px solid rgb(126, 116, 103);
-  background: #ccc;
-  color: #333;
+/* INDEX-lIST */
+.best-li-box {
+  display: flex;
 }
-.sticky-banner-frame .btn-bascket {
-  background: rgb(75, 39, 39);
-  border: 0.1px solid #333;
-  color: #fff;
-}
-.sticky-banner-frame .btn-top {
-  background: #fff;
-  border: 0.1px solid #333;
-  color: #333;
-}
-.sticky-banner-frame .btn-top:hover {
-  background: #333;
-  border: 0.1px solid #fff;
-  color: #fff;
-}
-.sticky-banner-frame .btn-top:active {
-  background: #000;
-  border: 0.1px solid #fff;
-  color: #eee;
-}
-.sticky-banner-frame .btn-top .top-icon {
+.best-li-box > li {
+  min-width: 200px;
+  max-width: 30%;
   position: relative;
-}
-.sticky-banner-frame .btn-top:hover .top-icon > span {
-  background: #fff;
-  animation: 0.4s bounce infinite ease-in-out alternate;
-}
-@keyframes bounce {
-  0% {
-    top: 13px;
-  }
-  100% {
-    top: 8px;
-    background: #333;
-  }
-}
-.sticky-banner-frame .btn-top .top-icon > span {
-  position: absolute;
-  width: 10px;
-  height: 3px;
-  background: #333;
-  top: 13px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0 0 0 #999;
+  transform: translate(0px, 0px);
   transition: 0.2s;
 }
-.sticky-banner-frame .btn-top .top-icon .top-icon-01 {
-  transform: rotate(45deg);
-  left: 31px;
+.best-li-box > li:hover {
+  box-shadow: 5px 5px 10px #999;
+  transform: translate(-5px, -5px);
 }
-.sticky-banner-frame .btn-top .top-icon .top-icon-02 {
-  transform: rotate(-45deg);
-  left: 26px;
+.best-li-box > li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.best-li-box > li .li-img {
+  position: relative;
+  overflow: hidden;
+}
+.li-img .li-slide-box {
+  position: absolute;
+  height: 50px;
+  bottom: -100%;
+  left: 0;
+  transition: 0.2s;
+  background: #00000066;
+}
+.best-li-box > li .li-img:hover .li-slide-box {
+  transition: 0.2s;
+  bottom: 0px;
+}
+.li-img .li-slide-box .li-slide {
+  color: #fff;
+  font-weight: bold;
+}
+
+.li-img .li-slide-box .li-slide a {
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+.li-txt {
+  margin: 10px auto;
+  text-align: center;
+  cursor: pointer;
+}
+.li-txt:hover .li-name {
+  text-decoration: underline;
+}
+.li-name {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: auto;
+}
+.li-price {
+  margin: auto;
+  color: rgb(194, 26, 26);
+}
+.li-icon {
+  margin: auto;
+}
+
+.main-best::after {
+  content: "추천";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(212, 0, 0, 0.8);
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.main-new::after {
+  content: "신상";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 123, 0, 0.8);
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.main-soldout::after {
+  content: "품절";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(153, 153, 153, 0.8);
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.main-soldout .li-slide-box {
+  display: none;
+}
+.main-soldout .li-img::before {
+  content: "매진";
+  text-align: center;
+  position: absolute;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  padding-top: calc(60% - 6vw);
+  font-size: calc(6vw - 1em);
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-weight: bold;
 }
 
 /* LOGIN */

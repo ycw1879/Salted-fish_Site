@@ -1,15 +1,32 @@
 /* COMMON */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  transition: 0.01s;
-  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  font-size: 18px;
 }
 a {
   text-decoration: none;
   color: #333;
+}
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+  margin: 0;
 }
 li > a {
   width: 100%;
@@ -35,6 +52,7 @@ body .__body .contents .gs-txt-l {
   display: none;
 }
 
+/* 컨텐츠 정렬 위주 */
 .gs-space-around {
   justify-content: space-around;
 }
@@ -56,10 +74,6 @@ body .__body .contents .gs-txt-l {
 .gs-flex-ch {
   flex-direction: column;
 }
-.gs-flex > li {
-  display: flex;
-  align-items: center;
-}
 
 .gs-li-flex > li {
   display: flex;
@@ -67,7 +81,6 @@ body .__body .contents .gs-txt-l {
 .gs-li-flex > li > div:nth-child(1) {
   width: 60px;
 }
-
 .gs-ch-fill > * {
   width: 100%;
 }
@@ -225,28 +238,38 @@ li.gs-list-active {
 }
 
 .gs-line {
-  width: 98vw;
+  display: block;
+  width: 100%;
   height: 1px;
   margin: 10px auto;
-  border-bottom: solid 1px #eee;
+  border-bottom-color: #eee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.gs-line-bold {
+  border-bottom-width: 2px;
+}
+.gs-line-bk {
+  border-bottom-color: #333;
+}
+.gs-line-grey {
+  border-bottom-color: #999;
 }
 
 .gs-li-wall > li:last-child:after {
   display: none;
 }
 .gs-li-wall > li:after {
-  content: "";
+  display: inline-block;
+  content: "|";
   margin: 0 5px;
-  height: 14px;
-  width: 1px;
-  background: #aaa;
 }
 .gs-li-wall-row > li:last-child {
   border-bottom: none;
 }
 .gs-li-wall-row > li {
-  border-bottom: #eee 1px solid;
-  padding: 20px 0;
+  border-bottom: #999 0.1px solid;
+  padding: 7px 0;
 }
 .gs-li-dot > li:last-child:after {
   display: none;
@@ -279,6 +302,9 @@ li.gs-list-active {
 .gs-li-mr-20 > li {
   margin-right: 20px;
 }
+.gs-li-mr-100 > li {
+  margin-right: 100px;
+}
 
 .gs-mh-5 {
   margin: 5px auto;
@@ -288,6 +314,9 @@ li.gs-list-active {
 }
 .gs-mh-20 {
   margin: 20px auto;
+}
+.gs-mh-50 {
+  margin: 50px auto;
 }
 .gs-mr-5 {
   margin-right: 5px;
@@ -307,6 +336,9 @@ li.gs-list-active {
 .gs-mb-20 {
   margin-bottom: 20px;
 }
+.gs-mb-50 {
+  margin-bottom: 50px;
+}
 .gs-mb-100 {
   margin-bottom: 100px;
 }
@@ -323,6 +355,9 @@ li.gs-list-active {
 
 .gs-fc-999 {
   color: #999;
+}
+.gs-fc-fff {
+  color: #fff;
 }
 .gs-fc-bbb {
   color: #bbb;
@@ -342,10 +377,10 @@ li.gs-list-active {
 .gs-btn {
   padding: 10px 20px;
   border: 1px solid rgba(200, 200, 200, 0.8);
-  border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 0 2px rgba(50, 50, 50, 0.6) inset;
   position: relative;
+  outline: none;
 }
 .gs-btn:hover::after {
   content: "";
@@ -373,6 +408,19 @@ li.gs-list-active {
 }
 .gs-btn-green:hover {
   background: rgb(37, 144, 33);
+}
+.gs-btn-white {
+  background: #ffffff;
+  color: #333;
+}
+
+.gs-btn-red {
+  background: #ff0000;
+  color: #fff;
+  font-weight: bold;
+}
+.gs-btn-red:hover {
+  background: #bd0000;
 }
 .gs-btn-default {
   background: -webkit-linear-gradient(#fff, #ccc);

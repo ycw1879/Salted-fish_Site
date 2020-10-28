@@ -1,12 +1,10 @@
 .__footer {
-  background: #eee;
-  font-size: 13px;
+  background: #333;
+  font-size: 16px;
+  color: #fff;
 }
 .__footer .footer-sec-frame {
-  height: 300px;
-}
-.__footer .footer-sec-frame > div {
-  margin-top: 50px;
+  padding: 50px 0;
 }
 
 .icon-ul li i {
@@ -30,12 +28,19 @@
 
 .bank-info-head li {
   font-weight: bold;
-  color: #666;
 }
-.bank-info-data li {
-  color: #333;
+.customer-center li {
+  margin: 10px 0;
 }
-
-.customer-center-title {
+.customer-center li.customer-center-num {
+  margin-top: 20px;
+}
+/* .customer-center-frame .footer-title {
+  margin-bottom: 10px;
+} */
+.footer-title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 1.5em;
+  font-weight: bold;
 }

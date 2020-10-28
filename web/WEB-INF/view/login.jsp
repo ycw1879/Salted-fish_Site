@@ -30,11 +30,6 @@
           </article>
         </section>
       </div>
-
-      <div class="blank gs-center">
-
-      </div>
-
       <%-- 필요한 경우에만 실행 --%>
       <%-- <%@ include file="commons/aside.jsp" %> --%>
       <%@ include file="commons/footer.jsp" %>

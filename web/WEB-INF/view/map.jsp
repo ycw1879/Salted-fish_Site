@@ -9,7 +9,7 @@
       <section class="map-section">
         <article class="form-login gs-inner">
           <h1 class="login-title gs-title gs-mb-100">
-            오시는 길
+           오시는 길
           </h1>
           
           <div class="map-frame">
@@ -86,13 +86,8 @@
         
       </section>
     </div>
-
-        <div class="blank gs-center">
-
-        </div>
-
-        <%-- 필요한 경우에만 실행 --%>
-        <%-- <%@ include file="commons/aside.jsp" %> --%>
+    <%-- 필요한 경우에만 실행 --%>
+    <%-- <%@ include file="commons/aside.jsp" %> --%>
     </div>
     <%@ include file="commons/footer.jsp" %>
     </div>

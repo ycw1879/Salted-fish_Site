@@ -5,21 +5,20 @@
     <%@ include file="logout/logout.jsp" %>
     
     <%-- 로그인이 필요한 경우 --%>
-<%--      <%@ include file="login/login.jsp" %>--%>
+    <%-- <%@ include file="login/login.jsp" %> --%>
 
   
     <div class="banner-frame gs-flex gs-mb-20">
       <div class="card-name-frame gs-m-h">
         <div class="card-name">
-          <img src="/resources/img/name.png" alt="곰소젓갈전문점이미지" />
+          <img src="/resources/img/name02.jpg" alt="곰소젓갈전문점이미지" />
         </div>
       </div>
       
       <div class="sign-frame gs-m-a">
         <div class="sign">
-          <a href="#">
-            <img src="/resources/img/sign.png" alt="곰소젓갈전문점간판이미지" />
-          </a>
+          <a href="#"></a>
+          <img src="/resources/img/sign02.jpg" alt="곰소젓갈전문점간판이미지" />
         </div>
       </div>
       <div class="gs-blank gs-w10"></div>

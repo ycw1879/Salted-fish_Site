@@ -1,0 +1,80 @@
+/* MOREPAGE */
+.mp-header-frame .mp-header .mp-title-frame .mp-title {
+  font-size: 1.5em;
+}
+
+.mp-bc .bc-section {
+  color: #3ba0ff;
+  font-weight: 100;
+}
+.mp-bc .bc-div {
+  color: #aaa;
+  margin: 0 10px;
+}
+.mp-bc .bc-active {
+  color: #333;
+  font-weight: 400;
+}
+
+.mp-contents-frame .mp-contents {
+  width: 98%;
+}
+
+.img-small-box-frame .img-small-btn-l,
+.img-small-box-frame .img-small-btn-r {
+  font-size: 2em;
+  color: #000000;
+  padding: 10px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+.img-small-box-frame > div:hover {
+  color: #fff;
+  background: #818181;
+}
+
+.img-small-box li {
+  padding: 2% 1%;
+  width: 20%;
+  cursor: pointer;
+  position: relative;
+}
+.img-small-box li.img-active::after,
+.img-small-box li:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000038;
+}
+
+.con-top-info > div {
+  margin-bottom: 10px;
+}
+.con-top-info .info-box li {
+  margin-bottom: 10px;
+  text-indent: 10px;
+}
+.con-top-info .info-box li .info-sub {
+  font-weight: 600;
+  min-width: 90px;
+}
+.con-top-info .info-box li .info-sub div {
+  margin-top: 6px;
+}
+.info-price .price-num {
+  color: #ff0000;
+  font-size: 1.5em;
+}
+
+.quan-title {
+  text-indent: 10px;
+}
+
+.item-favorite {
+  min-width: 50px;
+  max-width: 50px;
+  padding: 0;
+}
