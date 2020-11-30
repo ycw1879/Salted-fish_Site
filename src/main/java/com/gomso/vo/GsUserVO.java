@@ -1,7 +1,9 @@
 package com.gomso.vo;
 
-public class GsUserVO {
+import lombok.Data;
 
+@Data
+public class GsUserVO {
     private int seq;
 
     private String userId;

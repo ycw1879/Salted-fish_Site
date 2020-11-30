@@ -8,9 +8,9 @@
         from gs_product a
         left join gs_image_file b
             on a.product_img_file_seq = b.seq
-        where delete_yn = 'N'
-            and is_best = 1
-        order by seq desc
+        where a.delete_yn = 'N'
+            and a.is_best = 1
+        order by a.seq desc
         limit 4
     </select>
 
@@ -19,9 +19,9 @@
         from gs_product a
         left join gs_image_file b
             on a.product_img_file_seq = b.seq
-        where delete_yn = 'N'
-            and is_new = 1
-        order by seq desc
+        where a.delete_yn = 'N'
+            and a.is_new = 1
+        order by a.seq desc
         limit 4
     </select>
 

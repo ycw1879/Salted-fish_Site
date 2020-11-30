@@ -3,6 +3,7 @@ import com.gomso.dao.GsImageFileDao;
 import com.gomso.dao.GsProductCategoryDao;
 import com.gomso.dao.GsProductDao;
 import com.gomso.dao.GsProductImgListDao;
+import com.gomso.vo.GsProductCategoryVO;
 import com.gomso.vo.GsProductVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,19 @@ public class GsProductService {
     @Autowired
     private GsProductDao gsProductDao;
     
+    // gs_product table
     public List<GsProductVO> selectGsProductBest(){
         return gsProductDao.selectGsProductBest();
     }
     
     public List<GsProductVO> selectGsProductNew(){
         return gsProductDao.selectGsProductNew();
+    }
+    
+    
+    
+    // gs_product_category
+    public List<GsProductCategoryVO> selectGsProductCategoryDistinct(){
+    
     }
 }

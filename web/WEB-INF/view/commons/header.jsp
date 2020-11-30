@@ -40,7 +40,7 @@
     <nav class="nav-frame gs-w80 gs-center gs-mb-100 gsm-mb-20">
       <ul class="nav gs-flex gs-ch-fill gsm-flex">
         <li><a href="#">곰소 젓갈</a></li>
-        <li><a href="#">오시는 길</a></li>
+        <li><a href="">오시는 길</a></li>
         <li><a href="/product/list">제품 소개</a></li>
         <li><a href="#">제품 후기</a></li>
         <li><a href="#">문의 게시판</a></li>

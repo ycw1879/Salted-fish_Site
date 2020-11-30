@@ -35,4 +35,11 @@ public class HomeController {
 		
 		return mv;
 	}
+	
+	@GetMapping(value={"/map"})
+	public ModelAndView map(HttpServletRequest request, HttpServletResponse response){
+		ModelAndView mv = new ModelAndView("map");
+		
+		return mv;
+	}
 }

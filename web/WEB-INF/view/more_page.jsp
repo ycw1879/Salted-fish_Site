@@ -83,28 +83,28 @@
                                 기본 4,000원 / 80,000이상 무료
                               </div>
                             </li>
-                            <li class="info-point">
-                              <div class="info-sub">적립금</div>
-                              <div class="info-con">190<i class="far fa-coins gs-txt-magenta gsm-txt-magenta"></i></div>
-                            </li>
+<%--                            <li class="info-point">--%>
+<%--                              <div class="info-sub">적립금</div>--%>
+<%--                              <div class="info-con">190<i class="far fa-coins gs-txt-magenta gsm-txt-magenta"></i></div>--%>
+<%--                            </li>--%>
                           </ul>
                         </div>
                         <div class="info-quantity-frame">
-                          <form action="GET">
-                            <div class="quan-title"><p>선택옵션</p></div>
-                            <select class="quan-box form-control gs-mh-10 gsm-mh-10">
-                              <option value="choose">선택</option>
-                              <option value="Salted fish 01">150g +0원</option>
-                              <option value="Salted fish 02">300g +11,000원</option>
-                              <option value="Salted fish 03">600g +31,000원</option>
-                            </select>
-                            <p class="gs-line gs-line-grey gsm-line gsm-line-grey"></p>
-                            <div class="buy-item gs-flex gsm-flex">
-                              <button class="gs-btn gs-w50 gs-mr-5 gs-btn-green gsm-btn gsm-w50 gsm-mr-5 gsm-btn-green">구매하기</button>
-                              <button class="gs-btn gs-w50 gs-mr-5 gs-btn-white gsm-btn gsm-w50 gsm-mr-5 gsm-btn-white">장바구니</button>
-                              <button class="gs-btn gs-btn-red gsm-btn gsm-btn-red item-favorite"><i class="far fa-heart"></i></button>
-                            </div>
-                          </form>
+<%--                          <form action="GET">--%>
+<%--                            <div class="quan-title"><p>선택옵션</p></div>--%>
+<%--                            <select class="quan-box form-control gs-mh-10 gsm-mh-10">--%>
+<%--                              <option value="choose">선택</option>--%>
+<%--                              <option value="Salted fish 01">150g +0원</option>--%>
+<%--                              <option value="Salted fish 02">300g +11,000원</option>--%>
+<%--                              <option value="Salted fish 03">600g +31,000원</option>--%>
+<%--                            </select>--%>
+<%--                            <p class="gs-line gs-line-grey gsm-line gsm-line-grey"></p>--%>
+<%--                            <div class="buy-item gs-flex gsm-flex">--%>
+<%--                              <button class="gs-btn gs-w50 gs-mr-5 gs-btn-green gsm-btn gsm-w50 gsm-mr-5 gsm-btn-green">구매하기</button>--%>
+<%--                              <button class="gs-btn gs-w50 gs-mr-5 gs-btn-white gsm-btn gsm-w50 gsm-mr-5 gsm-btn-white">장바구니</button>--%>
+<%--                              <button class="gs-btn gs-btn-red gsm-btn gsm-btn-red item-favorite"><i class="far fa-heart"></i></button>--%>
+<%--                            </div>--%>
+<%--                          </form>--%>
                         </div>
                       </div>
                     </div>

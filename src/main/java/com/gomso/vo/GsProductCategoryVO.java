@@ -4,11 +4,11 @@ import lombok.Data;
 
 @Data
 public class GsProductCategoryVO {
-
     private int seq;
 
     private String categoryCode;
     private String categoryTitle;
+    
     private String createTime;
     private String updateTime;
     private String deleteYn;
