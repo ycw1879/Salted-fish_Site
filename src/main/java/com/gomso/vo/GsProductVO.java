@@ -4,11 +4,6 @@ import lombok.Data;
 
 @Data
 public class GsProductVO {
-
-
-    private int seq;
-
-    private int ProductImgFileSeq;
     private String ProductTitle;
     private String ProductContent;
     private int Price;

@@ -9,8 +9,9 @@
               <li>곰소젓갈할인도매점</li>
               <li>도소매 전문</li>
               <li>국산 새우젓</li>
-              <li>저염식젓갈</li>
+              <li>저염식 젓갈</li>
               <li>전북 부안군</li>
+              <li>곰소 젓갈</li>
             </ul>
             <p class="gs-line-grey"></p>
             <p class="footer-adress gs-mh-10"><i class="fas fa-map-marker-alt gs-mr-5"></i>전북 부안군 진서면 곰소항길 22-13, 다동 155호</p>
@@ -31,14 +32,14 @@
                   <i class="fas fa-phone-alt gs-mr-5"></i> 010-9937-1879
                   </li>
                   <li class="customer-center-info">
-                    개장시간 10 : 00 AM - 06 : 00 PM
+                    개장시간 10 : 00 AM - 07 : 00 PM
                   </li>
-                  <li class="customer-center-info">
-                    점심시간 12 : 30 PM - 01 : 00 PM
-                  </li>
-                  <li class="customer-center-holiday">
-                  <i class="far fa-calendar-alt gs-mr-5"></i>  토, 일, 월, 공휴일 휴무
-                  </li>
+<%--                  <li class="customer-center-info">--%>
+<%--                    점심시간 12 : 30 PM - 01 : 00 PM--%>
+<%--                  </li>--%>
+<%--                  <li class="customer-center-holiday">--%>
+<%--                  <i class="far fa-calendar-alt gs-mr-5"></i>  토, 일, 월, 공휴일 휴무--%>
+<%--                  </li>--%>
                 </ul>
               </div>
             </div>
@@ -54,8 +55,8 @@
                   <li>계좌번호</li>
                 </ul>
                 <ul class="bank-info-data gs-min-120 gs-li-mh-10">
-                  <li class="gs-bank-poeple">윤 덕암</li>
-                  <li class="gs-bank-kinds">농협 은행</li>
+                  <li class="gs-bank-poeple">윤덕암</li>
+                  <li class="gs-bank-kinds">농협은행</li>
                   <li class="gs-bank-num">352-1191-9951-23</li>
                 </ul>
               </div>
