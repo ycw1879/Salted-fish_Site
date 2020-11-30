@@ -13,7 +13,7 @@
           </h1>
           
           <div class="map-frame gs-border-line-bk gs-flex gs-mb-100 gsm-border-line-bk gsm-flex gsm-mb-20">
-            <div class="map gs-m-a gsm-m-a">map API</div>
+              <img src= "/resources/img/map.png" alt="지도사진">
           </div>
 
           <ul class="map-text-frame gs-li-wall-row gsm-li-wall-row">
@@ -28,22 +28,22 @@
               <div class="map-title"><i class="fas fa-clock"></i>&nbsp;이용시간</div>
               <div class="map-data gs-flex">
                 <div class="gs-min-60 gs-fc-999 gs-b">매일</div>
-                <div>10:00 ~ 18:00</div>
+                <div>10:00 ~ 19:00</div>
               </div>
             </li>
             <li>
               <div class="map-title"><i class="fas fa-phone-alt"></i>&nbsp;전화번호</div>
               <div class="map-data">
-                <div class="gs-mb-5">010-0000-1234</div>
-                <div>063-000-1111</div>
+                <div class="gs-mb-5">010-9937-1879</div>
+                <div>063-582-0080</div>
               </div>
             </li>
-            <li>
-              <div class="map-title"><i class="fas fa-info-circle"></i>&nbsp;이용안내</div>
-              <div class="map-data">
-                주차
-              </div>
-            </li>
+<%--            <li>--%>
+<%--              <div class="map-title"><i class="fas fa-info-circle"></i>&nbsp;이용안내</div>--%>
+<%--              <div class="map-data">--%>
+<%--                주차--%>
+<%--              </div>--%>
+<%--            </li>--%>
             <li class="gsm-flex-ch">
               <div class="data-left gs-flex gs-w40 gsm-w100 gsm-flex">
                 <div class="map-title"><i class="fas fa-user-alt"></i>&nbsp;사업자정보</div>
@@ -55,7 +55,7 @@
                     </li>
                     <li class="data02 gs-flex">
                       <div class="gs-min-60 gs-fc-999 gs-b">대표자</div>
-                      <div>박성자</div>
+                      <div>윤덕암</div>
                     </li>
                   </ul>
                 </div>
