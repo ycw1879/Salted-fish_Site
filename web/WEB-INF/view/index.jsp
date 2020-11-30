@@ -1,4 +1,11 @@
+<%@ page import="java.util.List" %>
+<%@ page import="com.gomso.vo.GsProductVO" %>
+<%@ page import="com.gomso.core.utils.StringUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%
+  List<GsProductVO> bestProductList = (List) request.getAttribute("bestProductList");
+  List<GsProductVO> newProductList = (List) request.getAttribute("newProductList");
+%>
 <!DOCTYPE html>
 <html lang="UTF-8">
   <%@ include file="commons/head.jsp" %>
@@ -24,78 +31,51 @@
           <div class="best-li-box-frame">
             <h1 class="gs-title gs-mb-20 gsm-title gsm-mb-20"> 추천상품</h1>
             <ul class="best-li-box">
-              <li class="main-best gsm-mb-50">
-                <div class="li-img-box gs-w80 gs-m-a">
-                  <div class="li-img">
-                    <img src="/resources/img/j01.jpg" alt="image01">
-                    <div class="li-slide-box gs-w100 gs-flex">
-                      <p class="li-slide gs-m-a">
-                        제품 상세보기<a href="#"></a>
-                      </p>
+
+              <% for(GsProductVO bestProduct : bestProductList){ %>
+                <li class="main-best" onclick="goViewPage(<%= bestProduct.getSeq() %>)">
+                  <div class="li-img-box gs-w80 gs-m-a">
+                    <div class="li-img">
+<%--                  TODO: Img 처리 이후 해당 주석 변경    --%>
+                      <img src="/resources/img/j01.jpg" alt="image01">
+<%--                      <img src="/img/<%= bestProduct.getTitleFileName() %>" alt="image01">--%>
+                      <div class="li-slide-box gs-w100 gs-flex">
+                        <p class="li-slide gs-m-a">
+                          제품 상세보기<a href="/product/view/<%= bestProduct.getSeq() %>"></a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="li-txt">
+                      <p class="li-name"><%= bestProduct.getProductTitle() %></p>
+                      <p class="li-price"><%= StringUtil.formatNumber( bestProduct.getPrice() ) %><b>&nbsp;원</b></p>
+                      <p class="li-icon"></p>
+                      <a href="/product/view/<%= bestProduct.getSeq() %>"></a>
                     </div>
                   </div>
-                  <div class="li-txt">
-                    <p class="li-name">머시기젓갈</p>
-                    <p class="li-price">10,000<b>&nbsp;원</b></p>
-                    <p class="li-icon"></p>
-                    <a href="#"></a>
-                  </div>
-                </div>
-              </li>
-              <li class="main-best">
-                <div class="li-img-box gs-w80 gs-m-a">
-                  <div class="li-img">
-                    <img src="/resources/img/j02.jpg" alt="image02">
-                    <div class="li-slide-box gs-w100 gs-flex">
-                      <p class="li-slide gs-m-a">
-                        제품 상세보기<a href="#"></a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="li-txt">
-                    <p class="li-name">머시기젓갈</p>
-                    <p class="li-price">20,000<b>&nbsp;원</b></p>
-                    <p class="li-icon"></p>
-                    <a href="#"></a>
-                  </div>
-                </div>
-              </li>
-              <li class="main-best">
-                <div class="li-img-box gs-w80 gs-m-a">
-                  <div class="li-img">
-                    <img src="/resources/img/j02.jpg" alt="image02">
-                    <div class="li-slide-box gs-w100 gs-flex">
-                      <p class="li-slide gs-m-a">
-                        제품 상세보기<a href="#"></a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="li-txt">
-                    <p class="li-name">머시기젓갈</p>
-                    <p class="li-price">20,000<b>&nbsp;원</b></p>
-                    <p class="li-icon"></p>
-                    <a href="#"></a>
-                  </div>
-                </div>
-              </li>
-              <li class="main-soldout">
-                <div class="li-img-box gs-w80 gs-m-a">
-                  <div class="li-img">
-                    <img src="/resources/img/j03.jpg" alt="image03">
-                    <div class="li-slide-box gs-w100">
-                      <p class="li-slide gs-m-a gs-w70 gs-txt-c">
-                        상세보기
-                      </p>
-                    </div>
-                  </div>
-                  <div class="li-txt">
-                    <p class="li-name">머시기젓갈</p>
-                    <p class="li-price">10,000<b>&nbsp;원</b></p>
-                    <p class="li-icon"></p>
-                    <a href="#"></a>
-                  </div>
-                </div>
-              </li>
+                </li>
+              <% } %>
+
+<%--              품절, 매진일시 처리 --%>
+<%--              <li class="main-soldout">--%>
+<%--                <div class="li-img-box gs-w80 gs-m-a">--%>
+<%--                  <div class="li-img">--%>
+<%--                    <img src="/resources/img/j03.jpg" alt="image03">--%>
+<%--                    <div class="li-slide-box gs-w100">--%>
+<%--                      <p class="li-slide gs-m-a gs-w70 gs-txt-c">--%>
+<%--                        상세보기--%>
+<%--                      </p>--%>
+<%--                    </div>--%>
+<%--                  </div>--%>
+<%--                  <div class="li-txt">--%>
+<%--                    <p class="li-name">머시기젓갈</p>--%>
+<%--                    <p class="li-price">10,000<b>&nbsp;원</b></p>--%>
+<%--                    <p class="li-icon"></p>--%>
+<%--                    <a href="#"></a>--%>
+<%--                  </div>--%>
+<%--                </div>--%>
+<%--              </li>--%>
+
+
             </ul>
           </div>
 
@@ -105,78 +85,28 @@
             <h1 class="gs-title gs-mb-20 gsm-title gsm-mb-20"> 신상품
             </h1>
             <ul class="best-li-box">
-              <li class="main-new">
-                <div class="li-img-box gs-w80 gs-m-a">
-                  <div class="li-img">
-                    <img src="/resources/img/j01.jpg" alt="image01">
-                    <div class="li-slide-box gs-w100 gs-flex">
-                      <p class="li-slide gs-m-a">
-                        제품 상세보기<a href="#"></a>
-                      </p>
+              <% for(GsProductVO newProduct : newProductList){ %>
+                <li class="main-new" onclick="goViewPage(<%= newProduct.getSeq() %>)">
+                  <div class="li-img-box gs-w80 gs-m-a">
+                    <div class="li-img">
+                      <img src="/resources/img/j01.jpg" alt="image01">
+<%--                      <img src="/img/<%= newProduct.getTitleFileName() %>" alt="image01">--%>
+                      <div class="li-slide-box gs-w100 gs-flex">
+                        <p class="li-slide gs-m-a">
+                          제품 상세보기
+                          <a href="/product/view/<%= newProduct.getSeq() %>"></a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="li-txt">
+                      <p class="li-name"><%= newProduct.getProductTitle() %></p>
+                      <p class="li-price"><%= StringUtil.formatNumber( newProduct.getPrice() ) %><b>&nbsp;원</b></p>
+                      <p class="li-icon"></p>
+                      <a href="/product/view/<%= newProduct.getSeq() %>"></a>
                     </div>
                   </div>
-                  <div class="li-txt">
-                    <p class="li-name">머시기젓갈</p>
-                    <p class="li-price">10,000<b>&nbsp;원</b></p>
-                    <p class="li-icon"></p>
-                    <a href="#"></a>
-                  </div>
-                </div>
-              </li>
-              <li class="main-new">
-                <div class="li-img-box gs-w80 gs-m-a">
-                  <div class="li-img">
-                    <img src="/resources/img/j02.jpg" alt="image02">
-                    <div class="li-slide-box gs-w100 gs-flex">
-                      <p class="li-slide gs-m-a">
-                        제품 상세보기<a href="#"></a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="li-txt">
-                    <p class="li-name">머시기젓갈</p>
-                    <p class="li-price">20,000<b>&nbsp;원</b></p>
-                    <p class="li-icon"></p>
-                    <a href="#"></a>
-                  </div>
-                </div>
-              </li>
-              <li class="main-new">
-                <div class="li-img-box gs-w80 gs-m-a">
-                  <div class="li-img">
-                    <img src="/resources/img/j02.jpg" alt="image02">
-                    <div class="li-slide-box gs-w100 gs-flex">
-                      <p class="li-slide gs-m-a">
-                        제품 상세보기<a href="#"></a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="li-txt">
-                    <p class="li-name">머시기젓갈</p>
-                    <p class="li-price">20,000<b>&nbsp;원</b></p>
-                    <p class="li-icon"></p>
-                    <a href="#"></a>
-                  </div>
-                </div>
-              </li>
-              <li class="main-new">
-                <div class="li-img-box gs-w80 gs-m-a">
-                  <div class="li-img">
-                    <img src="/resources/img/j03.jpg" alt="image03">
-                    <div class="li-slide-box gs-w100 gs-flex">
-                      <p class="li-slide gs-m-a">
-                        제품 상세보기<a href="#"></a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="li-txt">
-                    <p class="li-name">머시기젓갈</p>
-                    <p class="li-price">10,000<b>&nbsp;원</b></p>
-                    <p class="li-icon"></p>
-                    <a href="#"></a>
-                  </div>
-                </div>
-              </li>
+                </li>
+              <% } %>
             </ul>
           </div>
         </article>
@@ -187,5 +117,12 @@
       </div>
     <%@ include file="commons/footer.jsp" %>
     </div>
+
+  <script>
+    const goViewPage = (seq) => {
+      location.href = '/product/view/' + seq;
+    }
+  </script>
+
   </body>
 </html>

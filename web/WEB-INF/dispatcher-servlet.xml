@@ -37,7 +37,7 @@
     <!--  external access  -->
     <!--  빌드시 주석 제거  -->
     <!--  외부 directory 주소 -->
-<!--    <mvc:resources mapping="/img/**" location="${img.dir}" cache-period="0"/>-->
+    <mvc:resources mapping="${img.uri}**" location="${img.dir}" cache-period="0"/>
 
     <!--  -->
     <!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->

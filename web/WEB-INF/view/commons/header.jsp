@@ -15,7 +15,7 @@
       
       <div class="sign-frame gs-flex-g3 gsm-m-a">
         <div class="sign gs-m-a">
-          <a href="#"></a>
+          <a href="/"></a>
           <img src="/resources/img/sign02.jpg" alt="곰소젓갈전문점간판이미지" />
         </div>
       </div>
@@ -39,11 +39,11 @@
 
     <nav class="nav-frame gs-w80 gs-center gs-mb-100 gsm-mb-20">
       <ul class="nav gs-flex gs-ch-fill gsm-flex">
-        <li><a href="#">오시는길</a></li>
-        <li><a href="#">제품소개</a></li>
-        <li><a href="#">주문안내</a></li>
-        <li><a href="#">게시판</a></li>
-        <li><a href="#">제품후기</a></li>
+        <li><a href="#">곰소 젓갈</a></li>
+        <li><a href="#">오시는 길</a></li>
+        <li><a href="/product/list">제품 소개</a></li>
+        <li><a href="#">제품 후기</a></li>
+        <li><a href="#">문의 게시판</a></li>
       </ul>
     </nav>
   </div>

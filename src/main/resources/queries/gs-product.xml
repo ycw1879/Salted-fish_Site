@@ -3,5 +3,26 @@
 
 <mapper namespace="com.gomso.dao.GsProductDao">
 
+    <select id="selectGsProductBest" resultType="com.gomso.vo.GsProductVO">
+        select a.*, b.alter_file_name as title_file_name
+        from gs_product a
+        left join gs_image_file b
+            on a.product_img_file_seq = b.seq
+        where delete_yn = 'N'
+            and is_best = 1
+        order by seq desc
+        limit 4
+    </select>
+
+    <select id="selectGsProductNew" resultType="com.gomso.vo.GsProductVO">
+        select a.*, b.alter_file_name as title_file_name
+        from gs_product a
+        left join gs_image_file b
+            on a.product_img_file_seq = b.seq
+        where delete_yn = 'N'
+            and is_new = 1
+        order by seq desc
+        limit 4
+    </select>
 
 </mapper>
