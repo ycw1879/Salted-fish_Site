@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,7 +17,7 @@ import java.util.List;
 public class GsProductService {
 
     @Autowired
-    private GsProductCategoryDao gsProductCategoryDaoDao;
+    private GsProductCategoryDao gsProductCategoryDao;
 
     @Autowired
     private GsProductImgListDao gsProductImgListDao;
@@ -33,10 +34,28 @@ public class GsProductService {
         return gsProductDao.selectGsProductNew();
     }
     
+    public List<GsProductVO> selectGsProductListFromCategory(int categorySeq){
+        return gsProductDao.selectGsProductListFromCategory(categorySeq);
+    }
+    
+    public List<List<GsProductVO>> selectGsProductAllList(){
+        List<List<GsProductVO>> resultList = new ArrayList<>();
+        List<GsProductCategoryVO> categoryList = selectGsProductCategory();
+        for(GsProductCategoryVO iter : categoryList){
+            List<GsProductVO> productList = selectGsProductListFromCategory( iter.getSeq() );
+            if(productList != null && !productList.isEmpty())
+                resultList.add( productList );
+        }
+        return resultList;
+    }
+    
+    public GsProductVO selectGsProductOne(int seq){
+        return null;
+    }
     
     
     // gs_product_category
-    public List<GsProductCategoryVO> selectGsProductCategoryDistinct(){
-    
+    public List<GsProductCategoryVO> selectGsProductCategory(){
+        return gsProductCategoryDao.selectGsProductCategory();
     }
 }

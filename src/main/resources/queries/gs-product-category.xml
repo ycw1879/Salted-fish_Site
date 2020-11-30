@@ -3,5 +3,10 @@
 
 <mapper namespace="com.gomso.dao.GsProductCategoryDao">
 
+    <select id="selectGsProductCategory" resultType="com.gomso.vo.GsProductCategoryVO">
+        select *
+        from gs_product_category
+        where delete_yn = 'N'
+    </select>
 
 </mapper>

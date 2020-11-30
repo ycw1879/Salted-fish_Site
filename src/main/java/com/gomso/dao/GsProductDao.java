@@ -24,4 +24,8 @@ public class GsProductDao {
     public List<GsProductVO> selectGsProductNew(){
         return sqlSession.selectList("selectGsProductNew");
     }
+    
+    public List<GsProductVO> selectGsProductListFromCategory(int categorySeq){
+        return sqlSession.selectList("selectGsProductListFromCategory", categorySeq);
+    }
 }

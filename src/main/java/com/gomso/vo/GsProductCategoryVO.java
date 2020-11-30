@@ -6,7 +6,6 @@ import lombok.Data;
 public class GsProductCategoryVO {
     private int seq;
 
-    private String categoryCode;
     private String categoryTitle;
     
     private String createTime;

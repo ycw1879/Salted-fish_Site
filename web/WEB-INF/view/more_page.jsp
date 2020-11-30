@@ -12,7 +12,7 @@
             <article class="mp-header-frame gs-inner">
               <div class="mp-header gs-mb-50">
                 <div class="mp-title-frame gs-mb-10">
-                  <h1 class="gs-title gsm-title"> 양념젓갈</h2>
+                  <h2 class="gs-title gsm-title"> 양념젓갈</h2>
                 </div>
                 <div class="mp-breadcrumb-frame">
                   <div class="mp-bc gs-flex gsm-flex">
