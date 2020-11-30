@@ -16,6 +16,9 @@ public class GsProductVO {
     private String DeliveryPrice;
     private String ManufactureDate;
     private String ManufactureAddr;
+    private int isNew;
+    private int isBest;
+    
     private String CreateTime;
     private String UpdateTime;
     private String DeleteYn;
