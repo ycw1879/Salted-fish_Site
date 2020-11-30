@@ -8,8 +8,11 @@ public class GsInfoVO {
 
     private int seq;
 
-    private String BossName;
-    private String CompanyAddr;
+    private String bossName;
+    private String companyAddr;
+    private String deliveryInfo;
+    private String updateTime;
+
 }
 
 
