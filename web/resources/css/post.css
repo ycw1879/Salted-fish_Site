@@ -1,0 +1,131 @@
+@media screen and (min-width: 769px) {
+  /* POST */
+  .table-comment {
+    background: #eee;
+    height: 3em !important;
+  }
+  .write-btn {
+    text-align: center;
+    margin-right: 0;
+  }
+  input[type="text"] {
+    padding: 0 10px;
+    outline: none;
+  }
+
+  /* POST-WRITE */
+  .post-write-title h2 {
+    font-size: 16px;
+    border-bottom: solid 1px #aaa;
+    padding: 0 0 10px;
+    width: 100%;
+  }
+
+  .post-write li.post-write-name {
+    border: none;
+    padding: 10px 0 20px 0;
+  }
+  .post-write li.post-write-subject .subject-con {
+    border: 1px solid #aaa;
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .post-write li div input {
+    outline: none;
+    border: none;
+  }
+  .write-img {
+    background: #eee;
+    border-top: none;
+  }
+
+  /* POST-AFTER */
+  .pa-img-box {
+    height: 200px;
+  }
+  .pa-img-box img {
+    width: auto;
+    height: 100%;
+  }
+  .pa-dot:after {
+    content: "";
+    margin: 2px 5px;
+    height: 3px;
+    width: 3px;
+    border-radius: 100%;
+    background: #333;
+    display: inline-block;
+  }
+}
+/* ■■■■■■■■■■■■■■■■■■■ 기본 ■■■■■■■■■■■■■■■■■■ */
+@media screen and (max-width: 768px) {
+  /* POST */
+  .mobile-hidden {
+    display: none;
+  }
+  .mobile-pa-head {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mobile-pa-star {
+    width: 50%;
+  }
+
+  .table-comment {
+    background: #eee;
+    height: 3em !important;
+  }
+  .write-btn {
+    text-align: center;
+    margin-right: 0;
+  }
+  input[type="text"] {
+    padding: 0 10px;
+    outline: none;
+  }
+
+  /* POST-WRITE */
+  .post-write-title h2 {
+    font-size: 16px;
+    border-bottom: solid 1px #aaa;
+    padding: 0 0 10px;
+    width: 100%;
+  }
+
+  .post-write li {
+    margin-bottom: 10px;
+  }
+  .post-write li.post-write-name {
+    border: none;
+    padding: 10px 0 20px 0;
+  }
+  .post-write li.post-write-subject .subject-con {
+    border: 1px solid #aaa;
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .post-write li div input {
+    outline: none;
+    border: none;
+  }
+  .write-img {
+    background: #eee;
+    border-top: none;
+  }
+
+  /* POST-AFTER */
+  .pa-contents-r {
+    padding: 10px 0;
+  }
+
+  /* POST-QUESTION */
+  .question-table tbody {
+    font-size: 0.9em;
+  }
+  .question-table tr > *:first-child {
+    display: none;
+  }
+  .post-vertical-bot {
+    vertical-align: bottom;
+  }
+}

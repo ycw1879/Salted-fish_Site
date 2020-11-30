@@ -1,11 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <footer>
   <div class="__footer">
-    <div class="footer-sec-frame gs-w70 gs-m-a">
+    <div class="footer-sec-frame gs-w70 gsm-w90 gs-m-a gsm-m-a">
       <div class="footer-sec01-frame">
-        <div class="footer-sec01 gs-w100 gs-mb-50">
+        <div class="footer-sec01 gs-w100 gs-mb-50 gsm-mb-20">
           <div class="footer-sec01-art01">
-            <ul class="gs-li-wall gs-flex">
+            <ul class="gs-li-wall gs-flex m-footer-li gsm-mb-20">
               <li>곰소젓갈할인도매점</li>
               <li>도소매 전문</li>
               <li>국산 새우젓</li>
@@ -20,7 +20,7 @@
       <div class="footer-sec02-frame">
         <div class="footer-sec02">
           <div class="footer-sec02-art01 gs-flex">
-            <div class="gs-flex gs-mr-20">
+            <div class="gs-flex gs-mr-20 gsm-mb-20">
               <div class="customer-center-frame">
                 <p class="footer-title gs-mh-5">
                   <i class="fas fa-info gs-mr-10" style="font-size:.9em"></i> 소비자센터
@@ -47,7 +47,7 @@
                 <i class="fas fa-won-sign gs-mr-10"></i> 계좌 정보
               </div>
               <p class="gs-line"></p>
-              <div class="bank-info-frame gs-flex">
+              <div class="bank-info-frame gs-flex gsm-flex">
                 <ul class="bank-info-head gs-min-60 gs-li-mh-10 gs-mr-20">
                   <li>예금주</li>
                   <li>입금은행</li>
@@ -66,3 +66,4 @@
     </div>
   </div>
 </footer>
+<script src="/resources/js/script.js" defer></script>

@@ -8,15 +8,15 @@
     <div class="contents">
       <section class="map-section">
         <article class="form-login gs-inner">
-          <h1 class="login-title gs-title gs-mb-100">
+          <h1 class="login-title gs-title gs-mb-100 gsm-title gsm-mb-20">
            오시는 길
           </h1>
           
-          <div class="map-frame">
-            map API
+          <div class="map-frame gs-border-line-bk gs-flex gs-mb-100 gsm-border-line-bk gsm-flex gsm-mb-20">
+            <div class="map gs-m-a gsm-m-a">map API</div>
           </div>
 
-          <ul class="map-text-frame gs-li-wall-row">
+          <ul class="map-text-frame gs-li-wall-row gsm-li-wall-row">
             <li>
               <div class="map-title"><i class="fas fa-map-marker-alt"></i>&nbsp;오시는길</div>
               <div class="map-data gs-flex">
@@ -44,8 +44,8 @@
                 주차
               </div>
             </li>
-            <li>
-              <div class="data-left gs-flex gs-w40">
+            <li class="gsm-flex-ch">
+              <div class="data-left gs-flex gs-w40 gsm-w100 gsm-flex">
                 <div class="map-title"><i class="fas fa-user-alt"></i>&nbsp;사업자정보</div>
                 <div class="map-data">
                   <ul>
@@ -61,7 +61,7 @@
                 </div>
               </div>
 
-              <div class="data-right gs-flex gs-w60">
+              <div class="data-right gs-flex gs-w60 gsm-w100 gsm-flex">
                 <div class="map-title"><i class="fas fa-user-alt"></i>&nbsp;입금계좌</div>
                 <div class="map-data">
                   <ul class="">
