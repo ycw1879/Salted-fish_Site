@@ -4,19 +4,19 @@ import lombok.Data;
 
 @Data
 public class GsProductVO {
-    private String ProductTitle;
-    private String ProductContent;
-    private int Price;
-    private String CategoryCode;
-    private int DeliveryPrice;
-    private String ManufactureDate;
-    private String ManufactureAddr;
+    private String productTitle;
+    private String productContent;
+    private int price;
+    private String categoryCode;
+    private int deliveryPrice;
+    private String manufactureDate;
+    private String manufactureAddr;
     private int isNew;
     private int isBest;
     
-    private String CreateTime;
-    private String UpdateTime;
-    private String DeleteYn;
+    private String createTime;
+    private String updateTime;
+    private String deleteYn;
 
     
     // join gs_image_file table

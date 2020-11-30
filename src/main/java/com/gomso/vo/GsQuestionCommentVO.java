@@ -8,11 +8,11 @@ public class GsQuestionCommentVO {
 
 
     private int seq;
-    private int UserSeq;
-    private int QuestionSeq;
+    private int userSeq;
+    private int questionSeq;
 
-    private String CommentContent;
-    private String CreateTime;
-    private String UpdateTime;
-    private String DeleteYn;
+    private String commentContent;
+    private String createTime;
+    private String updateTime;
+    private String deleteYn;
 }

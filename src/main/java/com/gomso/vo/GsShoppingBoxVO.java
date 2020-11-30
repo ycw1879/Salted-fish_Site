@@ -8,9 +8,9 @@ public class GsShoppingBoxVO {
 
 
     private int seq;
-    private int ProductSeq;
+    private int productSeq;
 
-    private String CreateTime;
-    private String UpdateTime;
-    private String DeleteYn;
+    private String createTime;
+    private String updateTime;
+    private String deleteYn;
 }

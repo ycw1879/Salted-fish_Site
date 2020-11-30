@@ -6,10 +6,10 @@ import lombok.Data;
 public class GsProductImgListVO {
 
     private int seq;
-    private int ProductSeq;
-    private int FileSeq;
+    private int productSeq;
+    private int fileSeq;
 
-    private String CreateTime;
-    private String UpdateTime;
-    private String DeleteYn;
+    private String createTime;
+    private String updateTime;
+    private String deleteYn;
 }

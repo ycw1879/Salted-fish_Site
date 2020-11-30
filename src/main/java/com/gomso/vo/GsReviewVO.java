@@ -6,14 +6,14 @@ import lombok.Data;
 public class GsReviewVO {
 
     private int seq;
-    private int UserSeq;
+    private int userSeq;
 
-    private int ProductSeq;
-    private int ReviewPoint;
-    private String ReviewTitle;
-    private String ReviewContent;
-    private String AdminCheck;
-    private String CreateTime;
-    private String UpdateTime;
-    private String DeleteYn;
+    private int productSeq;
+    private int reviewPoint;
+    private String reviewTitle;
+    private String reviewContent;
+    private String adminCheck;
+    private String createTime;
+    private String updateTime;
+    private String deleteYn;
 }

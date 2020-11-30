@@ -7,10 +7,10 @@ public class GsQuestionVO {
 
     private int seq;
 
-    private int UserSeq;
-    private String QuestionTitle;
-    private String QuestionContent;
-    private String CreateTime;
-    private String UpdateTime;
-    private String DeleteYn;
+    private int userSeq;
+    private String questionTitle;
+    private String questionContent;
+    private String createTime;
+    private String updateTime;
+    private String deleteYn;
 }
