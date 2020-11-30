@@ -4,13 +4,13 @@ public class GsUserVO {
 
     private int seq;
 
-    private String UserId;
-    private String UserPw;
-    private String UserName;
-    private String Phone;
-    private String Address;
-    private String AddressDetail;
-    private String CreateTime;
-    private String UpdateTime;
-    private String DeleteYn;
+    private String userId;
+    private String userPw;
+    private String userName;
+    private String phone;
+    private String address;
+    private String addressDetail;
+    private String createTime;
+    private String updateTime;
+    private String deleteYn;
 }

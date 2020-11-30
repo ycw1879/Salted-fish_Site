@@ -8,15 +8,16 @@ public class GsProductVO {
 
     private int seq;
 
-    private String ProductImgFileSeq;
+    private int ProductImgFileSeq;
     private String ProductTitle;
     private String ProductContent;
-    private String Price;
+    private int Price;
     private String CategoryCode;
-    private String DeliveryPrice;
+    private int DeliveryPrice;
     private String ManufactureDate;
     private String ManufactureAddr;
     private String CreateTime;
     private String UpdateTime;
     private String DeleteYn;
+
 }
