@@ -31,5 +31,5 @@
   />
   <meta name="twitter:site" content="@곰소젓갈전문점" />
   <meta name="twitter:creator" content="@곰소 젓갈 할인도매 전문점" />
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
