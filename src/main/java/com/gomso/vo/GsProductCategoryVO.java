@@ -1,15 +1,14 @@
 package com.gomso.vo;
 
-
 import lombok.Data;
 
 @Data
-public class GsShoppingBox {
-
+public class GsProductCategoryVO {
 
     private int seq;
-    private int ProductSeq;
 
+    private String CategoryCode;
+    private String CategoryTitle;
     private String CreateTime;
     private String UpdateTime;
     private String DeleteYn;

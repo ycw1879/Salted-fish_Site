@@ -4,13 +4,12 @@ package com.gomso.vo;
 import lombok.Data;
 
 @Data
-public class GsQuestionComment {
+public class GsShoppingBoxVO {
+
 
     private int seq;
-    private int UserSeq;
-    private int QuestionSeq;
+    private int ProductSeq;
 
-    private String CommentContent;
     private String CreateTime;
     private String UpdateTime;
     private String DeleteYn;

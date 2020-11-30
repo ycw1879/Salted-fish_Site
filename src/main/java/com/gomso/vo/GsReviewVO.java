@@ -1,20 +1,19 @@
 package com.gomso.vo;
 
-
 import lombok.Data;
 
 @Data
-
-public class GsQuestion {
-
+public class GsReviewVO {
 
     private int seq;
-
     private int UserSeq;
-    private String QuestionTitle;
-    private String QuestionContent;
+
+    private int ProductSeq;
+    private int ReviewPoint;
+    private String ReviewTitle;
+    private String ReviewContent;
+    private String AdminCheck;
     private String CreateTime;
     private String UpdateTime;
     private String DeleteYn;
-
 }

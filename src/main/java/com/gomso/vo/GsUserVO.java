@@ -1,10 +1,6 @@
 package com.gomso.vo;
 
-
-import lombok.Data;
-
-@Data
-public class GsUser {
+public class GsUserVO {
 
     private int seq;
 
@@ -17,5 +13,4 @@ public class GsUser {
     private String CreateTime;
     private String UpdateTime;
     private String DeleteYn;
-
 }

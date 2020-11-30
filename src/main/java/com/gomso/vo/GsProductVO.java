@@ -1,10 +1,10 @@
 package com.gomso.vo;
 
-
 import lombok.Data;
 
 @Data
-public class GsProduct {
+public class GsProductVO {
+
 
     private int seq;
 
