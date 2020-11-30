@@ -22,4 +22,7 @@ public class GsProductVO {
     private String CreateTime;
     private String UpdateTime;
     private String DeleteYn;
+    
+    // join gs_image_file table
+    private String titleFileName;
 }
