@@ -50,7 +50,7 @@
     transform: rotate(180deg);
   }
   .gs-off {
-    display: none;
+    display: none !important ;
   }
 
   /* 컨텐츠 정렬 위주 */
@@ -214,9 +214,6 @@
   .gs-table tbody tr {
     border-bottom: 1px solid #ccc;
   }
-  /*.gs-table tr > *:nth-child(1) {*/
-  /*  width: 8%;*/
-  /*}*/
   .gs-table tr > *:nth-child(1) {
     width: 60%;
   }
@@ -448,6 +445,9 @@
   .gs-min-90 {
     min-width: 90px;
   }
+  .gs-min-100 {
+    min-width: 100px;
+  }
   .gs-min-120 {
     min-width: 120px;
   }
@@ -642,7 +642,7 @@
     transform: rotate(180deg);
   }
   .gsm-off {
-    display: none;
+    display: none !important ;
   }
 
   /* 컨텐츠 정렬 위주 */
@@ -910,8 +910,6 @@
     font-weight: bold;
   }
 
-  .gsm-li-wall > li:last-child:after {
-  }
   .gsm-li-wall > li:after {
     content: "";
   }
@@ -1057,6 +1055,9 @@
   .gsm-max-90 {
     max-width: 90px;
   }
+  .gsm-max-100 {
+    max-width: 100px;
+  }
   .gsm-max-120 {
     max-width: 120px;
   }
@@ -1174,11 +1175,5 @@
 
   .gsm-star {
     color: #ffa600;
-  }
-  .gsm-star-fill::after {
-  }
-  .gsm-star-empty::after {
-  }
-  .gsm-star-harf::after {
   }
 }

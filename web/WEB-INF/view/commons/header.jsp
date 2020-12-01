@@ -50,7 +50,7 @@
         <li><a href="/gomsoInfo">곰소 젓갈</a></li>
         <li><a href="/map">오시는 길</a></li>
         <li><a href="/product/list">상품 소개</a></li>
-        <li><a href="#">제품 후기</a></li>
+<%--        <li><a href="#">제품 후기</a></li>--%>
         <li><a href="/question/list">문의 게시판</a></li>
       </ul>
     </nav>

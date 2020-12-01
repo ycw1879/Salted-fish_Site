@@ -24,8 +24,8 @@
             </form>
 
             <ul class="my-box gs-flex gs-m-a gs-center gs-li-wall gs-mh-10 gs-mb-100 gsm-flex gsm-m-a gsm-center gsm-mh-10 gsm-mb-50">
-              <li><a href="#">비밀번호 찾기</a></li>
-              <li><a href="#">회원가입</a></li>
+<%--              <li><a href="#">비밀번호 찾기</a></li>--%>
+<%--              <li><a href="#">회원가입</a></li>--%>
             </ul>
           </article>
         </section>

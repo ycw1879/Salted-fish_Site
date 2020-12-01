@@ -2,11 +2,11 @@
 <div class="sticky-banner-frame" onclick="clickBtnDown();">
   <div class="sticky-banner">
    <%-- 버튼 숨기기 활성화시 div.btn-frame-ㅇㅇㅇ.btn-down 클래스 추가 hide 제외 --%>
-    <div class="btn-frame btn-frame-bascket btn-down">
-      <div class="btn-sizing btn-bascket">
-        <p class="btn-center">장바구니</p>
-      </div>
-    </div>
+<%--    <div class="btn-frame btn-frame-bascket btn-down">--%>
+<%--      <div class="btn-sizing btn-bascket">--%>
+<%--        <p class="btn-center">장바구니</p>--%>
+<%--      </div>--%>
+<%--    </div>--%>
     <div class="btn-frame btn-frame-call btn-down" onclick="clickCall();">
       <div class="btn-sizing btn-call">
         <p class="btn-center">전화연결</p>
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div class="btn-frame btn-frame-map btn-down">
+    <div class="btn-frame btn-frame-map btn-down" onclick="location.href='/map';">
       <div class="btn-sizing btn-map">
         <p class="btn-center">오시는길</p>
       </div>

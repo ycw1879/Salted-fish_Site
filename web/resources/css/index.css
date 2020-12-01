@@ -5,6 +5,8 @@
 @import "contents.css";
 @import "more_page.css";
 @import "post.css";
+@import "basket.css";
+@import "create.css";
 
 @media screen and (min-width: 769px) {
   .blank {
@@ -49,14 +51,15 @@
   .gs-inner.view-flex-ch .view-change .view-icon-small {
     display: block;
   }
-  .no-result{
-    font-size:3em;
-    font-weight: bold;
-    text-align: center;
-  }
+
   .best-li-box {
     display: flex;
     flex-wrap: wrap;
+  }
+  .no-result{
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
   }
   .best-li-box > li {
     min-width: 200px;
@@ -194,9 +197,6 @@
     width: auto;
     box-shadow: 0 0 5px #ccc;
   }
-  .img-frame .img img {
-    /* max-width: 500px; */
-  }
   .form-login form > * {
     padding: 10px;
   }
@@ -239,6 +239,11 @@
   }
 
   /* INDEX-lIST */
+  .no-result{
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
   .best-li-box > li {
     max-width: 100%;
     position: relative;
@@ -253,11 +258,6 @@
     position: absolute;
     top: 0;
     left: 0;
-  }
-  .no-result{
-    font-size:2em;
-    font-weight: bold;
-    text-align: center;
   }
   .best-li-box > li .li-img {
     position: relative;
@@ -389,7 +389,7 @@
   }
   .form-login form {
     width: 95%;
-    margin: auto;
+    margin: auto auto 50px;
   }
   .form-login form > * {
     padding: 10px;

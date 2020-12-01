@@ -36,6 +36,13 @@ public class HomeController {
 		return mv;
 	}
 	
+	@GetMapping(value="/gomsoInfo")
+	public ModelAndView gomsoInfo(HttpServletRequest request, HttpServletResponse response){
+		ModelAndView mv = new ModelAndView("gs_info");
+		
+		return mv;
+	}
+	
 	@GetMapping(value={"/map"})
 	public ModelAndView map(HttpServletRequest request, HttpServletResponse response){
 		ModelAndView mv = new ModelAndView("map");

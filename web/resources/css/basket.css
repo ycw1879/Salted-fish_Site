@@ -1,0 +1,42 @@
+@media screen and (min-width: 769px) {
+  /* BASKET */
+
+}
+/* ■■■■■■■■■■■■■■■■■■■ 기본 ■■■■■■■■■■■■■■■■■■ */
+
+@media screen and (max-width: 768px) {
+  /* BASKET */
+  .basket-table tbody tr td:nth-of-type(1) {
+    text-align: left;
+  }
+  .basket-table thead,
+  .basket-table tbody {
+    flex-direction: column;
+  }
+  .basket-table thead tr {
+    height: 4em;
+  }
+  .basket-table tbody tr {
+    height: 4em;
+    cursor: pointer;
+  }
+  .basket-table tbody tr:hover {
+    background: #eee;
+  }
+  .basket-table thead tr {
+    border-bottom: 2px solid #aaa;
+  }
+  .basket-table tbody tr {
+    border-bottom: 1px solid #ccc;
+  }
+  .basket-table tr > *:nth-child(1) {
+    min-width: 100px;
+  }
+  .basket-table tr > *:nth-child(2) {
+    width: 100%;
+  }
+  .basket-table tr > *:nth-child(3) {
+    min-width: 60px;
+  }
+
+}

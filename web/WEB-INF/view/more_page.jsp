@@ -121,12 +121,9 @@
 						</div>
 
 						<div class="mp-contents-mid-frame gs-mb-50 gsm-mb-50">
-							<div class="mp-tab-frame">
-								<ul class="mp-tab gs-flex gs-space-around gs-txt-c gs-b gs-mb-20 gsm-flex gsm-space-around gsm-txt-c gsm-b gsm-mb-20">
-									<li class="mp-point">상품정보</li>
-									<li>배송정보</li>
-									<li>교환정보</li>
-								</ul>
+							<div class="mp-tab-frame gs-mb-50 gsm-mb-50">
+								<h2 class="gs-title gsm-title"> 상세정보
+								</h2>
 							</div>
 							<div class="mp-con-mid gs-w80 gs-m-a">
 <%--								<img src="/resources/img/detail.jpg" alt="detail"/>--%>
@@ -137,11 +134,8 @@
 
 						<div class="mp-contents-bot-frame gs-mb-50">
 							<div class="mp-tab-frame">
-								<ul class="mp-tab gs-flex gs-space-around gs-txt-c gs-b gs-mb-20 gsm-flex gsm-space-around gsm-txt-c gsm-b gsm-mb-20">
-									<li>상품정보</li>
-									<li class="mp-point">배송정보</li>
-									<li>교환/정보</li>
-								</ul>
+								<h2 class="gs-title gsm-title gs-mb-50 gsm-mb-50"> 배송정보
+								</h2>
 							</div>
 							<div class="mp-table-frame">
 								<ul class="mp-table">
@@ -178,52 +172,49 @@
 
                             <%-- TODO: 교환/반품 정보는 없애고 탭을 2개로 --%>
 							<div class="mp-tab-frame">
-								<ul class="mp-tab gs-flex gs-space-around gs-txt-c gs-b gs-mb-20 gsm-flex gsm-space-around gsm-txt-c gsm-b gsm-mb-20">
-									<li>상품정보</li>
-									<li>배송정보</li>
-									<li class="mp-point">교환/반품 정보</li>
-								</ul>
+								<h2 class="gs-title gsm-title gs-mb-50 gsm-mb-50"> 판매자 정보
+								</h2>
 							</div>
 							<div class="mp-change-frame">
 								<li class="mp-table-text-frame">
 									<ul class="mp-table-text">
-										<table class="gs-w100 gs-mb-20 gs-txt-l">
-											<thead>
-											<tr>
-												<th class="gs-txt-l" colspan="4">
-													<b>교환 / 반품 안내</b><br/>
-												</th>
-											</tr>
-											</thead>
-											<tbody>
-											<tr>
-												<th>판매자 지정택배사</th>
-												<td colspan="3">명수택배</td>
-											</tr>
-											<tr>
-												<th>반품배송비</th>
-												<td>편도 3,000원 (최초 비용 무료인 경우 6,000원)</td>
-											</tr>
-											<tr>
-												<th>교환배송비</th>
-												<td>6,000원</td>
-											</tr>
-											<tr>
-												<th>보내실 곳</th>
-												<td>전북 부안군 진서면 곰소항길 22-13, 다동 155호</td>
-											</tr>
-											<tr>
-												<th rowspan="2">
-                                  <span>
-                                    반품/교환&nbsp;사유에&nbsp;따른 요청&nbsp;가능&nbsp;기간
-                                  </span>
-												</th>
-												<td rowspan="2">표시/광고와 상이, 상품하자의 경우 상품 수령 후 3개월 이내 혹은 표시/광고와 다른 사실을 안
-													날로부터 30일 이내
-												</td>
-											</tr>
-											</tbody>
-										</table>
+<%--										<table class="gs-w100 gs-mb-20 gs-txt-l">--%>
+<%--											<thead>--%>
+<%--											<tr>--%>
+<%--												<th class="gs-txt-l" colspan="4">--%>
+<%--													<b>교환 / 반품 안내</b><br/>--%>
+<%--												</th>--%>
+<%--											</tr>--%>
+<%--											</thead>--%>
+<%--											<tbody>--%>
+<%--											<tr>--%>
+<%--												<th>판매자 지정택배사</th>--%>
+<%--												<td colspan="3">명수택배</td>--%>
+<%--											</tr>--%>
+<%--											<tr>--%>
+<%--												<th>반품배송비</th>--%>
+<%--												<td>편도 3,000원 (최초 비용 무료인 경우 6,000원)</td>--%>
+<%--											</tr>--%>
+<%--											<tr>--%>
+<%--												<th>교환배송비</th>--%>
+<%--												<td>6,000원</td>--%>
+<%--											</tr>--%>
+<%--											<tr>--%>
+<%--												<th>보내실 곳</th>--%>
+<%--												<td>전북 부안군 진서면 곰소항길 22-13, 다동 155호</td>--%>
+<%--											</tr>--%>
+<%--											<tr>--%>
+<%--												<th rowspan="2">--%>
+<%--		                                    <span>--%>
+<%--		                                        반품/교환&nbsp;사유에&nbsp;따른 요청&nbsp;가능&nbsp;기간--%>
+<%--		                                    </span>--%>
+<%--												</th>--%>
+<%--												<td rowspan="2">표시/광고와 상이, 상품하자의 경우 상품 수령 후 3개월 이내 혹은 표시/광고와 다른 사실을 안--%>
+<%--													날로부터 30일 이내--%>
+<%--												</td>--%>
+<%--											</tr>--%>
+<%--											</tbody>--%>
+<%--										</table>--%>
 
 										<table class="gs-w100 gs-mb-50 gs-txt-l gsm-mb-50">
 											<thead>
@@ -242,21 +233,21 @@
 												<th>대표자</th>
 												<td>이은영</td>
 											</tr>
-											<tr>
-												<th>사업자등록번호</th>
-												<td>0000000000</td>
-											</tr>
-											<tr>
-												<th>통신판매업번호</th>
-												<td>2020-전북무안-00000</td>
-											</tr>
+<%--											<tr>--%>
+<%--												<th>사업자등록번호</th>--%>
+<%--												<td>0000000000</td>--%>
+<%--											</tr>--%>
+<%--											<tr>--%>
+<%--												<th>통신판매업번호</th>--%>
+<%--												<td>2020-전북무안-00000</td>--%>
+<%--											</tr>--%>
 											<tr>
 												<th rowspan="2">
 													사업장 소재지
 												</th>
 												<td rowspan="2">
-													전북 부안군 진서면 곰소항길 22-13, 다동 155호 (우 : 00000)<br/>
-													고객센터 : 010 9937 1879
+													전북 부안군 진서면 곰소항길 22-13, 다동 155호<br/>
+													전화번호 : 010-9937-1879
 												</td>
 											</tr>
 											</tbody>
