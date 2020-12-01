@@ -49,9 +49,14 @@
   .gs-inner.view-flex-ch .view-change .view-icon-small {
     display: block;
   }
-
+  .no-result{
+    font-size:3em;
+    font-weight: bold;
+    text-align: center;
+  }
   .best-li-box {
     display: flex;
+    flex-wrap: wrap;
   }
   .best-li-box > li {
     min-width: 200px;
@@ -83,7 +88,7 @@
     bottom: -100%;
     left: 0;
     transition: 0.2s;
-    background: #00000066;
+    background: #000000;
   }
   .best-li-box > li .li-img:hover .li-slide-box {
     transition: 0.2s;
@@ -102,6 +107,7 @@
   .li-img .li-slide-box .li-slide {
     color: #fff;
     font-weight: bold;
+    margin-top: 12.5px;
   }
 
   .li-img .li-slide-box .li-slide a {
@@ -247,6 +253,11 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+  .no-result{
+    font-size:2em;
+    font-weight: bold;
+    text-align: center;
   }
   .best-li-box > li .li-img {
     position: relative;

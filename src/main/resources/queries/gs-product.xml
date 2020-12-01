@@ -42,4 +42,33 @@
         where a.delete_yn = 'N'
     </select>
 
+    <select id="selectGsProductListFromSearchText" parameterType="string" resultType="com.gomso.vo.GsProductVO">
+        select a.*,
+            b.alter_file_name as title_file_name,
+            '검색 결과' as category_title
+        from gs_product a
+        left join gs_image_file b
+            on a.product_img_file_seq = b.seq
+        where a.delete_yn = 'N'
+            and a.product_title like concat('%', #{searchText},'%')
+    </select>
+
+    <select id="selectGsProductOne" parameterType="int" resultType="com.gomso.vo.GsProductVO">
+        select a.*,
+            b.alter_file_name as title_file_name,
+            c.category_title as category_title
+        from gs_product a
+        left join gs_image_file b
+            on a.product_img_file_seq = b.seq
+        join (
+            select *
+            from gs_product_category
+            where delete_yn = 'N'
+        ) c
+            on a.category_seq = c.seq
+        where a.seq = #{seq}
+            and a.delete_yn = 'N'
+        limit 1
+    </select>
+
 </mapper>

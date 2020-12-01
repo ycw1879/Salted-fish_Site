@@ -28,4 +28,12 @@ public class GsProductDao {
     public List<GsProductVO> selectGsProductListFromCategory(int categorySeq){
         return sqlSession.selectList("selectGsProductListFromCategory", categorySeq);
     }
+    
+    public List<GsProductVO> selectGsProductListFromSearchText(String searchText){
+        return sqlSession.selectList("selectGsProductListFromSearchText", searchText);
+    }
+    
+    public GsProductVO selectGsProductOne(int seq){
+        return sqlSession.selectOne("selectGsProductOne", seq);
+    }
 }

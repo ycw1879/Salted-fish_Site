@@ -3,5 +3,19 @@
 
 <mapper namespace="com.gomso.dao.GsUserDao">
 
+    <select id="selectGsUserFromId" parameterType="string" resultType="com.gomso.vo.GsUserVO">
+        select *
+        from gs_user
+        where user_id = #{userId}
+            and delete_yn = 'N'
+    </select>
+
+    <select id="selectGsUserFromIdPw" parameterType="com.gomso.vo.GsUserVO" resultType="com.gomso.vo.GsUserVO">
+        select *
+        from gs_user
+        where user_id = #{userId}
+            and user_pw = #{userPw}
+            and delete_yn = 'N'
+    </select>
 
 </mapper>

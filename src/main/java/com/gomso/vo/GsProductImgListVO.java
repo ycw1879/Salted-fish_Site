@@ -11,4 +11,7 @@ public class GsProductImgListVO {
     private String createTime;
     private String updateTime;
     private String deleteYn;
+    
+    // gs_image_file table
+    private String fileName;
 }

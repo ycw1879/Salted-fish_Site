@@ -2,6 +2,10 @@
   .desktop-hidden {
     display: none;
   }
+  .btn-center {
+    text-align: center;
+    margin: 25px auto;
+  }
   .btn-sizing {
     width: 70px;
     height: 70px;
@@ -95,16 +99,19 @@
     left: 26px;
   }
 
+  .call-popup-frame.popup {
+    overflow-y: auto;
+  }
   .call-popup-frame {
     position: relative;
     position: fixed;
+    overflow: hidden;
     min-width: 0px;
     min-height: 0px;
-    background: #ffffffee;
-    overflow: hidden;
+    background: #ffffff;
     width: 0%;
     height: 0%;
-    box-shadow: 0 0 10px #00000099;
+    box-shadow: 0 0 10px #000000;
     right: 65px;
     bottom: 340px;
     cursor: default;
@@ -119,7 +126,7 @@
 
   .btn-close-frame {
     position: relative;
-    background: #27272746;
+    background: #444444;
   }
   .btn-close-frame .btn-close {
     justify-content: right;
@@ -127,12 +134,13 @@
     height: 70px;
     position: relative;
     transition: 0.2s;
+    cursor: pointer;
   }
   .btn-close-frame .btn-close:hover {
-    background: #333;
+    background: #fff;
   }
   .btn-close-frame .btn-close:hover p {
-    background: #fff;
+    background: #333;
   }
   .ctrl-box {
     position: relative;
@@ -143,15 +151,13 @@
   .btn-close-frame .btn-close p {
     width: 30px;
     height: 3px;
-    background: #333;
+    background: #fff;
     transition: 0.3s;
     transform: rotate(45deg);
   }
   .btn-close-frame .btn-close .btn-close-01 {
     position: absolute;
     transform: rotate(-45deg);
-  }
-  .btn-close-frame .btn-close .btn-close-02 {
   }
   .btn-close-frame a {
     position: absolute;
@@ -189,6 +195,10 @@
     color: #fff;
     transition: 0.2s;
     box-shadow: 0px 5px 8px #eeeeee49;
+  }
+  .btn-center {
+    text-align: center;
+    margin: 25px auto;
   }
 
   .btn-down {

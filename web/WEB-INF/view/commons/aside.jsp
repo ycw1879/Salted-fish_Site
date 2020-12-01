@@ -1,29 +1,28 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<div class="sticky-banner-frame">
+<div class="sticky-banner-frame" onclick="clickBtnDown();">
   <div class="sticky-banner">
    <%-- 버튼 숨기기 활성화시 div.btn-frame-ㅇㅇㅇ.btn-down 클래스 추가 hide 제외 --%>
     <div class="btn-frame btn-frame-bascket btn-down">
       <div class="btn-sizing btn-bascket">
-        <p class="gs-center gsm-center">장바구니</p>
+        <p class="btn-center">장바구니</p>
       </div>
     </div>
-    <div class="btn-frame btn-frame-call btn-down">
+    <div class="btn-frame btn-frame-call btn-down" onclick="clickCall();">
       <div class="btn-sizing btn-call">
-        <p class="gs-center gsm-center">전화연결</p>
+        <p class="btn-center">전화연결</p>
       </div>
-      <div class="call-popup-frame">
+      <div class="call-popup-frame" onclick="event.stopPropagation()">
       <%-- popup class 추가로 팝업창 확인 가능 --%>
         <div class="call-popup">
           <div class="btn-close-frame gs-flex gs-flex-end">
-            <div class="btn-close">
+            <div class="btn-close" onclick="clickCall();">
               <div class="ctrl-box">
                 <p class="btn-close-01"></p>
                 <p class="btn-close-02"></p>
               </div>
-            <a href="#"></a>
             </div>
           </div>
-          <div class="call-popup-contents">
+          <div class="call-popup-contents" >
             <i class="fas fa-phone-alt"></i>
             <div>
               <p class="gs-mh-10 gs-w80 gsm-mh-10">
@@ -33,8 +32,7 @@
               </p>
               <p class="gs-mh-20 call-number gsm-mh-10">010 - 9937 - 1879</p>
               <p class="gs-line gs-line-grey"></p>
-              <button class="gs-btn gsm-btn">확인
-              </button>
+              <button class="gs-btn gsm-btn" onclick="clickCall();">확인</button>
             </div>
           </div>
         </div>
@@ -42,7 +40,7 @@
     </div>
     <div class="btn-frame btn-frame-map btn-down">
       <div class="btn-sizing btn-map">
-        <p class="gs-center gsm-center">오시는길</p>
+        <p class="btn-center">오시는길</p>
       </div>
     </div>
     <div class="btn-frame btn-frame-top btn-down" onclick="clickTop();">
@@ -51,7 +49,7 @@
           <span class="top-icon-01"></span>
           <span class="top-icon-02"></span>
         </div>
-        <p class="gs-center gsm-center">맨 위로</p>
+        <p class="btn-center">맨 위로</p>
       </div>
     </div>
     <div class="btn-frame btn-frame-hide desktop-hidden ">

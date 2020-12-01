@@ -1,9 +1,27 @@
 let search = document.getElementsByClassName("search-input-frame");
 let view = document.getElementsByClassName("gs-inner");
 let btnTop = document.getElementsByClassName("btn-frame-top");
-let questionTable = document.getElementsByClassName("question-table");
+let btnCall = document.getElementsByClassName("call-popup-frame");
+let btnCallBack1 = document.getElementsByClassName("btn-close");
+let btnCallBack2 = document.getElementsByTagName("button");
+let btnDownMobile = document.getElementsByClassName("btn-frame");
+let mpTab = document.querySelectorAll(".mp-tab-frame ul li");
+let mpTab2 = document.getElementsByTagName(".mp-tab-frame ul li");
+
 function clickSearch(){
-    search[0].classList.toggle('search-off');
+    const headerFormSearch = document.querySelector("#header-form-search");
+    const headerInputSearch = document.querySelector("#header-input-search");
+    if( headerFormSearch.classList.contains('search-off') ){
+        headerInputSearch.value = '';
+        search[0].classList.toggle('search-off');
+    }else{
+        const searchText = headerInputSearch.value;
+        if(searchText == null || searchText == undefined || searchText.length == 0){
+            search[0].classList.toggle('search-off');
+        }else{
+            headerFormSearch.submit();
+        }
+    }
 }
 function clickView(){
     view[0].classList.toggle('view-flex-ch');
@@ -11,6 +29,22 @@ function clickView(){
 function clickTop(){
     window.scrollTo({top:0, behavior:'smooth'});
 }
+function clickCall(){
+    btnCall[0].classList.toggle('popup');
+}
+function clickBtnDown(){
+    for(i=0; i <= btnDownMobile.length-2; i++){
+        btnDownMobile[i].classList.toggle('btn-down');
+    }
+}
+function clickTab(){
+    console.log(mpTab);
+    console.log(mpTab2);
+    console.log('작동중');
+}
+
+
+console.log("불러오기 완료");
 
 
 
@@ -34,7 +68,3 @@ String.prototype.format = function(){
 
     return num.format();
 };
-
-console.log("불러오기 완료");
-var num = 1234;
-console.log(num.format());

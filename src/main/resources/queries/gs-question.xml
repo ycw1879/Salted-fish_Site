@@ -3,5 +3,42 @@
 
 <mapper namespace="com.gomso.dao.GsQuestionDao">
 
+    <select id="selectGsQuestionSize" resultType="int">
+        select count(*)
+        from gs_question a
+        join (
+            select *
+            from gs_user
+            where delete_yn = 'N'
+        ) b
+            on a.user_seq = b.seq
+        where a.delete_yn = 'N'
+    </select>
+
+    <select id="selectGsQuestList" parameterType="int" resultType="com.gomso.vo.GsQuestionVO">
+        select a.*,
+            b.user_name,
+            ifnull(c.comment_cnt, 0) as comment_cnt
+        from gs_question a
+        join (
+            select *
+            from gs_user
+            where delete_yn = 'N'
+        ) b
+            on a.user_seq = b.seq
+        left join (
+            select a.question_seq, count(*) as comment_cnt
+            from gs_question_comment a
+            join gs_user b
+                on a.user_seq = b.seq
+            where a.delete_yn = 'N'
+                and b.delete_yn = 'N'
+            group by a.question_seq
+        ) c
+            on a.seq = c.question_seq
+        where a.delete_yn = 'N'
+        order by a.seq desc
+        limit #{limitStartNo}, 10
+    </select>
 
 </mapper>

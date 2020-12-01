@@ -41,7 +41,9 @@
     top: 0;
     left: 0;
   }
-
+  .search-box {
+    margin-top: 25%;
+  }
   .search-box .search-body {
     background: #fff;
     border: 1px solid #999;

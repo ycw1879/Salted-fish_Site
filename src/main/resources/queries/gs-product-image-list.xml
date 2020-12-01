@@ -3,4 +3,14 @@
 
 <mapper namespace="com.gomso.dao.GsProductImgListDao">
 
+    <select id="selectGsProductImgList" parameterType="int" resultType="com.gomso.vo.GsProductImgListVO">
+        select a.*,
+            b.alter_file_name as file_name
+        from gs_product_img_list a
+        left join gs_image_file b
+            on a.file_seq = b.seq
+        where a.product_seq = #{productSeq}
+            and a.delete_yn = 'N'
+    </select>
+
 </mapper>

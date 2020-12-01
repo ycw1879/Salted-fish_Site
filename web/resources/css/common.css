@@ -214,16 +214,16 @@
   .gs-table tbody tr {
     border-bottom: 1px solid #ccc;
   }
+  /*.gs-table tr > *:nth-child(1) {*/
+  /*  width: 8%;*/
+  /*}*/
   .gs-table tr > *:nth-child(1) {
-    width: 8%;
-  }
-  .gs-table tr > *:nth-child(2) {
     width: 60%;
   }
-  .gs-table tr > *:nth-child(3) {
-    width: 12%;
+  .gs-table tr > *:nth-child(2) {
+    width: 20%;
   }
-  .gs-table tr > *:nth-child(4) {
+  .gs-table tr > *:nth-child(3) {
     width: 20%;
   }
   .gs-center {
@@ -452,6 +452,28 @@
     min-width: 120px;
   }
 
+  .gs-max-40 {
+    max-width: 40px;
+  }
+  .gs-max-50 {
+    max-width: 50px;
+  }
+  .gs-max-60 {
+    max-width: 60px;
+  }
+  .gs-max-70 {
+    max-width: 70px;
+  }
+  .gs-max-80 {
+    max-width: 80px;
+  }
+  .gs-max-90 {
+    max-width: 90px;
+  }
+  .gs-max-120 {
+    max-width: 120px;
+  }
+
   .gs-fc-999 {
     color: #999;
   }
@@ -564,12 +586,6 @@
 
   .gs-star {
     color: #ffa600;
-  }
-  .gs-star-fill::after {
-  }
-  .gs-star-empty::after {
-  }
-  .gs-star-harf::after {
   }
 }
 /* ■■■■■■■■■■■■■■■■■■■ 기본 ■■■■■■■■■■■■■■■■■■ */
@@ -1022,6 +1038,27 @@
   }
   .gsm-min-120 {
     min-width: 120px;
+  }
+  .gsm-max-40 {
+    max-width: 40px;
+  }
+  .gsm-max-50 {
+    max-width: 50px;
+  }
+  .gsm-max-60 {
+    max-width: 60px;
+  }
+  .gsm-max-70 {
+    max-width: 70px;
+  }
+  .gsm-max-80 {
+    max-width: 80px;
+  }
+  .gsm-max-90 {
+    max-width: 90px;
+  }
+  .gsm-max-120 {
+    max-width: 120px;
   }
 
   .gsm-fc-999 {

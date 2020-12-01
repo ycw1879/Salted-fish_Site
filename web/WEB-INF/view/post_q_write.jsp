@@ -25,12 +25,14 @@
                     <div>제목<b class="gs-txt-red gsm-txt-red">*</b></div>
                     <div class="subject-con"><input type="text" class="gs-w100" placeholder="제목을 입력해주세요" /></div>
                   </li>
+                  <li class="post-write-img gs-mb-20">
+                    <div>사진<b class="gs-txt-red gsm-txt-red">*</b></div>
+                    <div><input type="file" class="form-control"></div>
+                  </li>
                   <li class="post-write-content gsm-flex-ch">
                     <div class="gsm-mb-10">내용<b class="gs-txt-red gsm-txt-red">*</b></div>
                     <div class="gs-border-none gs-w100">
-                      <%@ include file="commons/summernote.jsp" %>
-                      <textarea name="" id="summernote" class="form-control" cols="30" rows="10"></textarea>
-                      <div class="gs-flex-end gs-txt-r">0&nbsp;/&nbsp;<b>3,000</b>자</div>
+                      <textarea name="" class="form-control gs-w100 gsm-w100" cols="30" rows="10" style="resize: none;"></textarea>
                     </div>
                   </li>
                 </ul>
@@ -46,14 +48,6 @@
       <%-- 필요한 경우에만 실행 --%>
       <%-- <%@ include file="commons/aside.jsp" %> --%>
     </div>
-    <script>
-      $(document).ready(function() {
-        $('#summernote').summernote({
-          lang: 'ko-KR',
-          height: 300,
-        });
-    });
-    </script>
     <%@ include file="commons/footer.jsp" %>
   </body>
 </html>

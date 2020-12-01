@@ -12,14 +12,14 @@
             <h1 class="login-title gs-title gsm-title">
               로그인
             </h1>
-            <form action="GET" class="gs-flex gs-flex-ch gs-w80 gs-m-a">
+            <form action="javascript:login();" method="post" class="gs-flex gs-flex-ch gs-w80 gs-m-a" id="loginForm">
               <div class="img-frame gs-m-w">
                 <div class="img gs-w80 gs-m-a gsm-m-a">
                   <img src="/resources/img/name02.jpg" alt="명함사진">
                 </div>
               </div>
-              <input type="text" class="gs-input gs-mh-5 gs-w100 gsm-w100 gsm-mh-5" placeholder="전화번호">
-              <input type="password" class="gs-input gs-mh-5 gs-w100 gsm-w100 gsm-mh-5" placeholder="비밀번호">
+              <input type="text" class="gs-input gs-mh-5 gs-w100 gsm-w100 gsm-mh-5" placeholder="아이디" name="id">
+              <input type="password" class="gs-input gs-mh-5 gs-w100 gsm-w100 gsm-mh-5" placeholder="비밀번호" name="pw">
               <button type="submit" class="gs-input gs-mh-5 gs-w100 gsm-w100 gsm-mh-5">로그인</button>
             </form>
 
@@ -34,6 +34,54 @@
       <%-- <%@ include file="commons/aside.jsp" %> --%>
       <%@ include file="commons/footer.jsp" %>
     </div>
+  <script type="text/javascript">
+    const login = () => {
+      const formData = document.querySelector("#loginForm");
+      const id = formData.id.value;
+      const pw = formData.pw.value;
+
+      if(id == null || id == undefined || id.length == 0){
+        alert('아이디를 입력해주세요.');
+        formData.id.focus();
+        return;
+      }
+
+      if(pw == null || pw == undefined || pw.length == 0){
+        alert('비밀번호를 입력해주세요.');
+        formData.pw.focus();
+        return;
+      }
+
+      axios.post('/login',{
+        userId: id,
+        userPw: pw
+      }).then((response) => {
+        const responseData = response.data;
+        const resultCode = responseData.resultCode;
+
+        if(resultCode == '000'){
+          location.href = '/';
+        }else if(resultCode == '401'){
+          alert('아이디를 입력해 주세요.');
+          formData.id.focus();
+        }else if(resultCode == '402'){
+          alert('비밀번호를 입력해주세요.');
+          formData.pw.focus();
+        }else if(resultCode == '403'){
+          alert('아이디가 틀립니다.');
+          formData.id.focus();
+        }else if(resultCode == '404'){
+          alert('비밀번호가 틀립니다.');
+          formData.pw.focus();
+        }else{
+          alert('시스템 오류 입니다.\n' +
+                  '잠시 후 다시 시도해 주세요.');
+        }
+      }).catch((error) => {
+        console.warn(error);
+      });
+    }
+  </script>
   </body>
 </html>
 

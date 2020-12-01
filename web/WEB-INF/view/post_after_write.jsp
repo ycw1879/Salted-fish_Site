@@ -28,19 +28,21 @@
                   <li class="post-write-subject gs-mb-20">
                     <div>별점<b class="gs-txt-red gsm-txt-red">*</b></div>
                     <form class="post-star-chk">
-                      <label for="star-1"><input type="radio" vlaue="star-chk-1" name="input-star-chk"/>&nbsp;1&nbsp;&nbsp;</label>
-                      <label for="star-2"><input type="radio" vlaue="star-chk-2" name="input-star-chk"/>&nbsp;2&nbsp;&nbsp;</label>
-                      <label for="star-3"><input type="radio" vlaue="star-chk-3" name="input-star-chk"/>&nbsp;3&nbsp;&nbsp;</label>
-                      <label for="star-4"><input type="radio" vlaue="star-chk-4" name="input-star-chk"/>&nbsp;4&nbsp;&nbsp;</label>
-                      <label for="star-5"><input type="radio" vlaue="star-chk-5" name="input-star-chk"/>&nbsp;5</label>
+                      <label for="star-1"><input type="radio" id="star-1" vlaue="star-chk-1" name="input-star-chk"/>&nbsp;1&nbsp;&nbsp;</label>
+                      <label for="star-2"><input type="radio" id="star-2" vlaue="star-chk-2" name="input-star-chk"/>&nbsp;2&nbsp;&nbsp;</label>
+                      <label for="star-3"><input type="radio" id="star-3" vlaue="star-chk-3" name="input-star-chk"/>&nbsp;3&nbsp;&nbsp;</label>
+                      <label for="star-4"><input type="radio" id="star-4" vlaue="star-chk-4" name="input-star-chk"/>&nbsp;4&nbsp;&nbsp;</label>
+                      <label for="star-5"><input type="radio" id="star-5" vlaue="star-chk-5" name="input-star-chk"/>&nbsp;5</label>
                     </form>
+                  </li>
+                  <li class="post-write-img gs-mb-20">
+                    <div>사진<b class="gs-txt-red gsm-txt-red">*</b></div>
+                    <div><input type="file" class="form-control"></div>
                   </li>
                   <li class="post-write-content gsm-flex-ch">
                     <div class="gsm-mb-10">내용<b class="gs-txt-red gsm-txt-red">*</b></div>
                     <div class="gs-border-none gs-w100">
-                      <%@ include file="commons/summernote.jsp" %>
-                      <textarea name="" id="summernote" class="form-control" cols="30" rows="10"></textarea>
-                      <div class="gs-flex-end gs-txt-r">0&nbsp;/&nbsp;<b>3,000</b>자</div>
+                      <textarea name="" class="form-control gs-w100 gsm-w100" cols="30" rows="10" style="resize: none;"></textarea>
                     </div>
                   </li>
                 </ul>
@@ -56,14 +58,6 @@
       <%-- 필요한 경우에만 실행 --%>
       <%-- <%@ include file="commons/aside.jsp" %> --%>
     </div>
-    <script>
-      $(document).ready(function() {
-        $('#summernote').summernote({
-          lang: 'ko-KR',
-          height: 300,
-        });
-    });
-    </script>
     <%@ include file="commons/footer.jsp" %>
   </body>
 </html>
